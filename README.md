@@ -1,37 +1,27 @@
-# Telegram Forwarder Control Center — kháng nghị hàng loạt theo mẫu
+# DEVYN FORWARDER
 
-[**Tải ZIP mới: kháng nghị hàng loạt theo mẫu điền từng SS**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-bulk-appeal-template.zip)
+[**Tải DEVYN FORWARDER — giao diện mới**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-professional-ui.zip)
 
-Giữ nguyên **.env.docker và Docker volume**, giải nén đè mã nguồn, chạy **setup.cmd một lần** để nâng migration **0009** và build API/web/worker. Sau đó dùng **run.cmd**.
+Giữ **.env.docker và Docker volume**, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để build bản mới, sau đó dùng **run.cmd**. Database head vẫn **0009**. Nếu vẫn thấy giao diện cũ, dùng Ctrl+F5.
 
-## Cách dùng
+## Giao diện mới
 
-Chọn SS → **Kháng nghị theo mẫu đã chọn** → nhập email chung hoặc riêng → **Chuẩn bị bản xem trước** → kiểm tra từng nội dung đã điền → xác nhận gửi các bản sẵn sàng.
+- Nhận diện **DEVYN FORWARDER**, logo SVG riêng, favicon và tiêu đề trình duyệt.
+- Trang đăng nhập hai cột; sidebar tối; màu nhấn tím; bảng, biểu mẫu, nút và cửa sổ đồng bộ.
+- Tổng quan có thẻ chỉ số và biểu đồ từ dữ liệu máy chủ; quản lý session có thẻ lọc tình trạng.
+- Chế độ sáng/tối, tùy chọn theo hệ thống và menu điện thoại.
+- Giữ nhập nhiều session, API Telegram trên web, check session/spam, SpamBot, kháng nghị theo mẫu và **Xóa đã chọn** một lần bấm.
 
-- `{name}`: tên SS trong ứng dụng.
-- `{phone}`: số điện thoại đọc từ chính session, có tùy chọn khai báo riêng.
-- `{email}`: email bạn cung cấp. Telegram không trả đầy đủ email qua session; ứng dụng không tự đoán.
+[Hướng dẫn giao diện](HUONG_DAN_DEVYN_UI.md) · [Kiểm thử](KIEM_THU_DEVYN_UI.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-Mẫu có thể sửa. Nội dung như “I never spam messages” cần đúng với các tài khoản đã chọn và được người dùng xác nhận trước khi gửi. Bước chuẩn bị chỉ đọc/tạo nháp, chưa gửi kháng nghị.
+51 kiểm thử frontend qua, TypeScript/Vite build thành công. Chromium thật kiểm tra 9 trang trên desktop/điện thoại, sáng/tối, menu và cửa sổ thao tác bằng dữ liệu giả. Không dùng session người dùng hoặc gửi tin Telegram trong đợt kiểm tra UI. ZIP không chứa session, database cá nhân, khóa hoặc .env.docker.
 
-Chỉ gửi khi SpamBot đang ở bước yêu cầu mô tả được nhận diện và ngữ cảnh vẫn khớp lúc gửi. Tài khoản chưa đúng bước được báo riêng; dùng cửa sổ SpamBot để hoàn tất bước phù hợp rồi tạo nháp mới. Gửi tin không bảo đảm Telegram duyệt/gỡ hạn chế.
-
-[Hướng dẫn](HUONG_DAN_KHANG_NGHI_THEO_MAU.md) · [Kiểm thử](KIEM_THU_KHANG_NGHI_THEO_MAU.md) · [Windows](HUONG_DAN_WINDOWS.md)
-
-309 kiểm thử Python và 51 kiểm thử giao diện qua. Chromium/FakeBackend: chọn 3 SS giả, chuẩn bị 2 bản chính xác và báo 1 chưa sẵn sàng; 0 tin trước khi duyệt, đúng 2 tin sau duyệt. Chưa dùng session người dùng gửi Telegram thật. Nội dung/email/số trong nháp và payload được mã hóa.
-
-Giữ chức năng nhập tự chia lô, quản lý/check session, SpamBot và Xóa đã chọn một lần bấm. ZIP không chứa session người dùng, .env.docker hoặc database cá nhân.
-
-SHA256: `745ae249ceb155eee37c0cbf28e8b0aa33d746dd5232a06fc9cba975f45c0423`.
+SHA256: `9e63566f21bd4c8e06ca360ea4246fafdf379e9aa191e47e86c2e5215e36b03e`.
 
 ## Bản trước
 
-- [Xóa hàng loạt không gõ xác nhận](telegram-forwarder-control-center-bulk-delete.zip)
+- [Kháng nghị hàng loạt theo mẫu](telegram-forwarder-control-center-bulk-appeal-template.zip)
+- [Xóa hàng loạt](telegram-forwarder-control-center-bulk-delete.zip)
 - [SpamBot / kháng nghị](telegram-forwarder-control-center-spam-check-appeal.zip)
 - [Quản lý nhiều session](telegram-forwarder-control-center-session-manager.zip)
 - [Nhập session](telegram-forwarder-control-center-session-import.zip)
-- [Đăng nhập/API credentials trên web](telegram-forwarder-control-center-web-login.zip)
-- [BOM fix](telegram-forwarder-control-center-windows-autoconnect-bomfix.zip)
-- [Tự kết nối worker](telegram-forwarder-control-center-windows-autoconnect.zip)
-- [Windows cách ly](telegram-forwarder-control-center-windows-isolated.zip)
-- [Khôi phục](telegram-forwarder-control-center-phase6-fixed-v2-recovered.zip)

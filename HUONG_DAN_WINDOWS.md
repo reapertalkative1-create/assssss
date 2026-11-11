@@ -80,3 +80,7 @@ Lọc và chọn các dòng, bấm **Xóa đã chọn** để xóa hàng loạt 
 ## Kháng nghị hàng loạt theo mẫu
 
 Bản mới cần setup.cmd một lần để nâng migration 0009. Chọn SS → Kháng nghị theo mẫu đã chọn → nhập email chung/riêng → chuẩn bị/xem trước nội dung cá nhân hóa → xác nhận gửi các bản sẵn sàng. Xem [HUONG_DAN_KHANG_NGHI_THEO_MAU.md](HUONG_DAN_KHANG_NGHI_THEO_MAU.md).
+
+## DEVYN FORWARDER — giao diện mới
+
+Bản mới đổi toàn bộ giao diện, thêm logo/favicon, sáng/tối và menu điện thoại. Giữ .env.docker và volume, giải nén đè mã nguồn vào thư mục cũ rồi chạy **setup.cmd một lần**, sau đó dùng run.cmd. Head vẫn 0009. Xem [HUONG_DAN_DEVYN_UI.md](HUONG_DAN_DEVYN_UI.md).
