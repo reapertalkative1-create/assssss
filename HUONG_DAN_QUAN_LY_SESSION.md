@@ -56,3 +56,7 @@ Session/API pair vẫn được mã hóa. ZIP nguồn công khai không chứa s
 ## Tự check và kháng nghị spam
 
 Xem [HUONG_DAN_SPAM_KHANG_NGHI.md](HUONG_DAN_SPAM_KHANG_NGHI.md): tùy chọn tự check sau nhập, check phiên + spam hàng loạt, bộ lọc spam và gửi nội dung kháng nghị theo hội thoại thật của @SpamBot.
+
+## Xóa đã chọn
+
+Nút **Xóa đã chọn** xếp hàng xóa ngay các dòng đã tích/toàn bộ kết quả lọc trừ dòng bỏ tích, không gõ tên và không mở hộp xác nhận. Xóa khỏi ứng dụng, giữ tài khoản Telegram; tài khoản đang chạy được dừng/đợi lease trước khi dọn. Xem [HUONG_DAN_XOA_HANG_LOAT.md](HUONG_DAN_XOA_HANG_LOAT.md).

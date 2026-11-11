@@ -72,3 +72,7 @@ Xem [HUONG_DAN_QUAN_LY_SESSION.md](HUONG_DAN_QUAN_LY_SESSION.md): bỏ trần t�
 ## Tự check và kháng nghị spam
 
 Bản mới cần setup.cmd một lần để nâng migration 0008. Khi nhập session có tùy chọn tự check phiên/API + @SpamBot. Dùng **Thao tác → SpamBot / kháng nghị** để xem phản hồi, bấm nút bot hoặc xem trước/xác nhận nội dung kháng nghị. Xem [HUONG_DAN_SPAM_KHANG_NGHI.md](HUONG_DAN_SPAM_KHANG_NGHI.md).
+
+## Xóa các tài khoản đã tích
+
+Lọc và chọn các dòng, bấm **Xóa đã chọn** để xóa hàng loạt khỏi ứng dụng, không gõ tên hay mở hộp xác nhận. Xem [HUONG_DAN_XOA_HANG_LOAT.md](HUONG_DAN_XOA_HANG_LOAT.md). Cập nhật bằng setup.cmd một lần, giữ .env.docker và volume.
