@@ -63,4 +63,8 @@ Nếu thấy `Unexpected UTF-8 BOM`, tải bản BOM fix, giải nén đè vào 
 
 ## Nhập session có sẵn
 
-Vào **Tài khoản Telegram → Nhập session hàng loạt**. Chọn tối đa 100 file Telethon `.session` hoặc một ZIP, chọn worker Online, nhập API ID/hash và bấm Nhập. Xem [HUONG_DAN_NHAP_SESSION.md](HUONG_DAN_NHAP_SESSION.md). Cập nhật bản này cần chạy setup.cmd một lần để nâng migration 0006.
+Vào **Tài khoản Telegram → Nhập session hàng loạt**. Chọn nhiều file Telethon `.session` hoặc một ZIP, chọn worker Online, nhập API ID/hash và bấm Nhập. Xem [HUONG_DAN_NHAP_SESSION.md](HUONG_DAN_NHAP_SESSION.md). Cập nhật bản này cần chạy setup.cmd một lần để nâng migration 0007.
+
+## Quản lý nhiều session
+
+Xem [HUONG_DAN_QUAN_LY_SESSION.md](HUONG_DAN_QUAN_LY_SESSION.md): bỏ trần tổng 100 session, chọn toàn bộ kết quả lọc, bật/tắt/check hàng loạt, nhãn Live/Die/đóng băng/FloodWait/lỗi và lịch sử tác vụ lưu trong database.

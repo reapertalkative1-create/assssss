@@ -1,22 +1,29 @@
-# Telegram Forwarder Control Center — nhập session hàng loạt
+# Telegram Forwarder Control Center — quản lý nhiều session
 
-[**Tải ZIP bản mới — nhập tối đa 100 session trên web**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-session-import.zip)
+[**Tải ZIP quản lý session bản mới**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-session-manager.zip)
 
-Giữ nguyên **.env.docker** và Docker volume, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để nâng migration 0006 và build image mới. Sau đó dùng **run.cmd**.
+Giải nén đè vào thư mục cũ, **giữ nguyên .env.docker và Docker volume**, chạy **setup.cmd một lần** để nâng migration 0007 và build API/web/worker. Sau đó dùng **run.cmd**.
 
-Trên web: **Tài khoản Telegram → Nhập session hàng loạt → chọn tối đa 100 file Telethon .session hoặc một ZIP → chọn worker Online → nhập API ID/hash → Nhập và kiểm tra session**.
+## Quản lý trên web
 
-Session hợp lệ không cần OTP lại. Worker kiểm tra 3 session cùng lúc, báo từng kết quả và bỏ qua trùng trong các lô đã nhập. Sau khi thành công, bạn có thể Bật tài khoản khi cần chạy chuyển tiếp. Tổng tải lên 10 MiB. Không hỗ trợ Pyrogram/tdata.
+- Bỏ trần tổng 100 session: ZIP đọc từng file và tự chia lô; không cần tự tách gói 100.
+- Chọn từng dòng, theo trang hoặc toàn bộ kết quả lọc; có thể bỏ chọn một vài dòng trong toàn bộ.
+- Bật/Tắt/Check hàng loạt, đánh dấu hoặc bỏ dấu đóng băng thủ công.
+- Lọc Live, Die, lỗi mạng, FloodWait, đóng băng, worker, bật/tắt; tìm tên hoặc username.
+- Tác vụ lưu trong database, có tiến độ, lịch sử phân trang, lọc lỗi, thử lại riêng các mục lỗi và dừng xếp hàng. Đóng web không hủy tác vụ.
 
-Xem [hướng dẫn nhập](HUONG_DAN_NHAP_SESSION.md), [hướng dẫn Windows](HUONG_DAN_WINDOWS.md), [kiểm thử](KIEM_THU_NHAP_SESSION.md).
+Không có trần số session toàn catalog; giới hạn từng file/yêu cầu và tài nguyên máy vẫn áp dụng. Check đăng nhập không chứng minh mọi quyền Telegram đều bình thường. Đóng băng chỉ tự ghi khi Telegram trả lỗi FROZEN; nhãn thủ công được ghi rõ.
 
-269 kiểm thử Python, 45 kiểm thử giao diện qua; thử Chromium + worker với session giả. Chưa thử Telegram thật. Bản ZIP không chứa session người dùng hoặc .env.docker.
+Xem [hướng dẫn quản lý](HUONG_DAN_QUAN_LY_SESSION.md), [hướng dẫn Windows](HUONG_DAN_WINDOWS.md), [kết quả kiểm thử](KIEM_THU_QUAN_LY_SESSION.md).
 
-SHA256: `52f1d6331c8f06879843c38f9fb07f53aa12421264b8605a250f3c1ca4f6493e`.
+Đã thử Chromium: ZIP 205 session giả tự chia 100+100+5 và xác thực đủ; Tắt toàn bộ 251 tài khoản, bỏ/chọn lại từng dòng, lọc Die và giữ tác vụ khi tải lại trang. Chưa thử Telegram thật. ZIP không chứa session người dùng hoặc .env.docker.
+
+SHA256: `44db73c102260b39b5bffd53c43da0aa24b242e35ca4edc1ed41815585beef94`.
 
 ## Bản trước
 
-- [Nhập API ID/hash và OTP trên web](telegram-forwarder-control-center-web-login.zip)
+- [Nhập 100 session](telegram-forwarder-control-center-session-import.zip)
+- [Đăng nhập/API credentials trên web](telegram-forwarder-control-center-web-login.zip)
 - [BOM fix](telegram-forwarder-control-center-windows-autoconnect-bomfix.zip)
 - [Tự kết nối worker](telegram-forwarder-control-center-windows-autoconnect.zip)
 - [Windows cách ly](telegram-forwarder-control-center-windows-isolated.zip)
