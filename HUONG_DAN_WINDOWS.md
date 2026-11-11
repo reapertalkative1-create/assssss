@@ -60,3 +60,7 @@ docker compose --env-file .env.docker --profile telegram stop
 - Không bấm đồng thời hai setup/run: ứng dụng dùng khóa để tránh tạo hai worker hoặc ghi đè cấu hình.
 
 Đây là cấu hình local trên máy cá nhân, không phải bộ triển khai công khai qua internet. Telegram thật vẫn cần credential/tài khoản của bạn.
+
+## Cập nhật bản sửa BOM
+
+Nếu thấy `Unexpected UTF-8 BOM`, tải bản BOM fix, giải nén đè vào chính thư mục đang dùng, giữ `.env.docker` và volume. Chạy `setup.cmd` lại một lần để cập nhật image API. Tài khoản admin đã tạo được giữ lại; không cần cài lại Docker hay tạo lại database.

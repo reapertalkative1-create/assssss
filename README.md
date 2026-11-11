@@ -1,18 +1,13 @@
-# Telegram Forwarder — setup xong, run tự kết nối
+# Telegram Forwarder — Windows tự kết nối (đã sửa BOM)
 
-[Tải ZIP tự kết nối máy với web](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-windows-autoconnect.zip)
+[Tải ZIP đã sửa lỗi Unexpected UTF-8 BOM](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-windows-autoconnect-bomfix.zip)
 
-- Mở Docker Desktop. Bấm **setup.cmd** một lần để tạo tài khoản quản trị và tự tạo/lưu worker của máy này.
-- Những lần sau bấm **run.cmd**: worker tự Online, hiện tên máy Windows và mở **http://127.0.0.1:8787**.
-- Không cần tạo worker thủ công hoặc chép credential/URL. Máy có thể Online trước khi nhập thông tin Telegram.
-- Khi bắt đầu dùng Telegram, vẫn cần API ID/hash và đăng nhập OTP/2FA của bạn.
+**Nếu đang lỗi ở bước Connecting this computer:** giải nén đè vào đúng thư mục đang dùng, giữ .env.docker và Docker volume, rồi chạy setup.cmd lại một lần. Không cần cài lại Docker hay tạo lại tài khoản quản trị.
 
-**Cập nhật bản cũ:** giải nén đè mã nguồn vào đúng thư mục cũ, giữ .env.docker và Docker volume, chạy setup.cmd lại một lần để build image mới. Tài khoản, khóa và dữ liệu cũ được giữ lại.
+Setup tạo tài khoản và tự cấu hình worker. Những lần sau bấm run.cmd: worker tự Online và mở http://127.0.0.1:8787. Không cần chép credential hoặc URL. Telegram thật vẫn cần API ID/hash và OTP/2FA.
 
-[Hướng dẫn Windows](HUONG_DAN_WINDOWS.md) · [Kiểm thử tự kết nối](KIEM_THU_TU_KET_NOI.md)
+Bản này đọc JSON UTF-8 có/không BOM ở cả provision và wait-online; PowerShell gửi UTF-8 không BOM và khôi phục encoding sau lệnh. Đã tái hiện lỗi cũ và kiểm tra 6 trường hợp CLI trên Docker/PostgreSQL cùng các kiểm thử PowerShell; giữ nguyên worker/credential. Chưa thử trực tiếp Windows PowerShell 5.1 trên Windows.
 
-Đã qua 33 kiểm thử Python liên quan, kiểm tra PowerShell và chạy thực tế với Docker/PostgreSQL: không nhập credential/API Telegram vẫn Online; run hai lần dùng cùng worker, không đổi khóa và không in credential ra console. Chưa thử trực tiếp CMD trên Windows hoặc Telegram thật.
+[Hướng dẫn Windows](HUONG_DAN_WINDOWS.md) · [Kiểm thử](KIEM_THU_TU_KET_NOI.md)
 
-SHA-256: `2ca10e0d19606709e648983da61dfda28c1e8ce7c96ea7ea54e4109336ea1376`.
-
-Bản cũ: [Docker thủ công](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-windows-isolated.zip).
+SHA-256: `add964e8e068c92f5a5091440f5135191a6ca8118ed2bacf19cf11d15fad42a5`.

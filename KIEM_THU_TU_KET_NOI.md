@@ -9,3 +9,11 @@
 - Chưa đăng nhập/gửi tin qua Telegram thật. Worker Online không thay cho việc cấu hình API ID/hash và đăng nhập OTP/2FA.
 
 Bản này không thêm migration. Giữ nguyên .env.docker và Docker volume của bản cũ, chạy setup.cmd lại một lần để cài code vào image mới. Không kèm cấu hình riêng hoặc dữ liệu thử trong ZIP.
+
+## Sửa UTF-8 BOM trên Windows PowerShell
+
+- Bộ đọc CLI nhận byte UTF-8 có/không BOM bằng utf-8-sig, áp dụng cho cả provision và wait-online.
+- PowerShell đặt UTF-8 không BOM riêng cho lần gọi Docker JSON, sau đó khôi phục encoding của tiến trình gọi. Phản hồi JSON có BOM cũng được chấp nhận.
+- Đã tái hiện lỗi cũ bằng json.loads với U+FEFF đầu chuỗi.
+- 6 trường hợp CLI thực tế trên Docker/PostgreSQL đã qua: provision có/không BOM, wait-online có/không BOM, từ chối JSON không phải object có/không BOM. Worker ID và credential giữ nguyên.
+- Kiểm thử PowerShell xác nhận encoding không BOM khi gửi, khôi phục encoding cũ và đọc phản hồi BOM thành công.
