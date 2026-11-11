@@ -5,7 +5,7 @@
 1. Cài **Docker Desktop cho Windows** từ https://www.docker.com/products/docker-desktop/ nếu máy chưa có. Dùng chế độ **Linux containers** và mở Docker Desktop, đợi engine chạy. Không cần cài Python, Node.js hay PostgreSQL trên Windows.
 2. Giải nén toàn bộ ZIP vào một thư mục riêng, ví dụ `Documents\TelegramForwarder` trong thư mục người dùng. Không chạy CMD ngay bên trong ZIP.
 3. Bấm đúp **setup.cmd** một lần. Script tải image, tạo database, hỏi tên/mật khẩu quản trị và tự tạo/lưu worker cho máy này. Mật khẩu tối thiểu 12 ký tự, không chứa tên đăng nhập. Không có mật khẩu mặc định.
-4. Khi hoàn tất, trình duyệt mở **http://127.0.0.1:8787**. Lần sau chỉ cần mở Docker Desktop rồi bấm đúp **run.cmd**: worker tự kết nối, script đợi máy Online rồi mở web. Không phải chép credential hoặc URL kết nối.
+4. Khi hoàn tất, trình duyệt mở địa chỉ được in ở dòng **Application running** (mặc định http://127.0.0.1:8787, tự chuyển cổng nếu bận). Lần sau chỉ cần mở Docker Desktop rồi bấm đúp **run.cmd**: worker tự kết nối, script đợi máy Online rồi mở web. Không phải chép credential hoặc URL kết nối.
 
 Lần setup đầu cần internet và có thể mất vài phút. Script không cài Python/Node/PostgreSQL toàn hệ thống và không sửa biến PATH. Hai CMD gọi PowerShell có sẵn trên Windows; ExecutionPolicy Bypass chỉ áp dụng cho tiến trình chạy script đó.
 
@@ -92,3 +92,7 @@ Bản mới có nút check ngay từng dòng, check tất cả theo bộ lọc v
 ## Thông tin ngay trên bảng session
 
 Bản mới bỏ khung Tác vụ hàng loạt, đưa trạng thái/lỗi/phản hồi bot vào dòng SS. Chạy setup.cmd một lần để build API/web/worker, giữ .env.docker và volume. Xem [HUONG_DAN_BANG_SS.md](HUONG_DAN_BANG_SS.md).
+
+## Cổng web bị chiếm
+
+setup.cmd/run.cmd mới tự chọn cổng trống và lưu lại. Giữ .env.docker/volume, giải nén đè đúng thư mục cũ, chạy setup.cmd lại. Xem [HUONG_DAN_TU_CHON_CONG.md](HUONG_DAN_TU_CHON_CONG.md).

@@ -1,29 +1,30 @@
-# DEVYN FORWARDER — thông tin ngay trên bảng SS
+# DEVYN FORWARDER — tự chọn cổng web
 
-[**Tải ZIP mới: kết quả và tiến độ trực tiếp trên dòng session**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-inline-session-details.zip)
+[**Tải ZIP mới: sửa lỗi port 8787 already allocated**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-auto-port-fix.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để build API/web/worker, sau đó dùng **run.cmd**. Không thêm migration; head vẫn **0009**. Ctrl+F5 nếu trình duyệt còn giao diện cũ.
+Giữ **.env.docker và Docker volume**, giải nén đè toàn bộ ZIP vào **đúng thư mục cài đặt cũ**, mở Docker Desktop rồi chạy **setup.cmd lại**. Những lần sau dùng **run.cmd**. Không thêm migration; head vẫn **0009**.
 
-## Thay đổi
+## Sửa lỗi cổng
 
-Đã xóa khung **Tác vụ hàng loạt** phía dưới. Theo dõi ngay trên bảng SS:
+Build thành công nhưng web không khởi động được khi cổng 8787 bị ứng dụng/container khác giữ. Launcher mới:
 
-- **Tài khoản & kết nối**: danh tính, xác thực, worker, kết nối, bật/tắt, cấu hình API/session.
-- **Tình trạng & phản hồi**: spam, đóng băng, lỗi, FloodWait, thời gian check và nguyên văn phản hồi SpamBot hiện lưu.
-- **Tiến độ & kết quả**: đang chờ, worker xử lý, chờ duyệt, hoàn tất, thất bại/hết hạn và lỗi riêng từng SS.
-- **Xem / duyệt kháng nghị** mở lại bản đã chuẩn bị ngay tại dòng, kể cả sau khi đóng/mở web.
-- **Dừng cả đợt** ghi rõ phạm vi áp dụng cho mọi SS cùng đợt. Các nút chọn nhiều SS, check/bật/tắt/xóa/kháng nghị giữ nguyên.
+- Kiểm tra binding Docker và khả năng bind loopback; tự chọn cổng trống và lưu vào .env.docker.
+- Giữ cổng nếu thuộc chính web cùng project; không dừng container của bản cài khác.
+- Nếu có xung đột phát sinh lúc khởi động, chọn lại cổng và thử lại, tối đa 3 lần. Lỗi API/database khác vẫn được báo đúng.
+- Mở đúng địa chỉ thực tế ở dòng **Application running**, ví dụ http://127.0.0.1:8788; API allowed origins dùng cùng cổng.
+- Giữ project, admin, khóa, credential và dữ liệu; không xóa volume.
 
-Kết quả tự cập nhật mỗi 5 giây. Hoạt động từng SS được tải gộp theo trang, tối đa 5 thao tác hàng loạt ưu tiên đang xử lý/chờ duyệt cùng lệnh trực tiếp gần nhất; không cần gọi danh sách tác vụ riêng. Phản hồi bot chỉ hiện cho quản trị viên, giữ quyền vận hành viên như trước.
+Vẫn giữ bản UI mới: thông tin, phản hồi SpamBot, tiến độ và lỗi ngay trên dòng SS; không có khung Tác vụ hàng loạt phía dưới.
 
-[Hướng dẫn bảng SS](HUONG_DAN_BANG_SS.md) · [Kiểm thử](KIEM_THU_BANG_SS.md) · [Windows](HUONG_DAN_WINDOWS.md)
+[Hướng dẫn cổng](HUONG_DAN_TU_CHON_CONG.md) · [Kiểm thử](KIEM_THU_TU_CHON_CONG.md) · [Windows](HUONG_DAN_WINDOWS.md) · [Bảng SS](HUONG_DAN_BANG_SS.md)
 
-67 kiểm thử Python liên quan, 56 frontend và production build thành công. Chromium thật kiểm tra thông tin trên dòng, trạng thái check mới, mở lại kháng nghị sau reload và mobile bằng dữ liệu giả. Không sử dụng session người dùng/gửi Telegram thật. ZIP không chứa session, khóa, .env.docker hoặc database cá nhân.
+Kiểm thử PowerShell 7.4.6 trên Linux: socket bị chiếm thật, Docker binding/own listener, giữ cấu hình/khóa, lỗi cổng lúc startup và giới hạn retry; bộ hồi quy setup/run qua. Docker Compose config kiểm tra cổng web và API origins nhất quán. Chưa chạy trực tiếp Windows PowerShell 5.1/Docker Desktop của người dùng. ZIP không chứa session, khóa, .env.docker hoặc database cá nhân.
 
-SHA256: `6f521a5db0b8d7119411b04564bdcf10a30cb6e6c5d8dc63953752958d1e5815`.
+SHA256: `c51702216f15684f61eb5e56966604eab4186116bf2fffa996a9b725009fb69c`.
 
 ## Bản trước
 
+- [Thông tin trực tiếp trên bảng SS](devyn-forwarder-inline-session-details.zip)
 - [Nút check spam / đóng băng](devyn-forwarder-spam-frozen-check.zip)
 - [DEVYN FORWARDER — giao diện chuyên nghiệp](devyn-forwarder-professional-ui.zip)
 - [Kháng nghị hàng loạt theo mẫu](telegram-forwarder-control-center-bulk-appeal-template.zip)
