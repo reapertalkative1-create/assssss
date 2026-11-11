@@ -1,25 +1,32 @@
-# Telegram Forwarder Control Center — xóa các tài khoản đã tích
+# Telegram Forwarder Control Center — kháng nghị hàng loạt theo mẫu
 
-[**Tải ZIP mới: xóa hàng loạt không gõ xác nhận**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-bulk-delete.zip)
+[**Tải ZIP mới: kháng nghị hàng loạt theo mẫu điền từng SS**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-bulk-appeal-template.zip)
 
-Giữ nguyên **.env.docker và Docker volume**, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để build API/web mới. Sau đó dùng **run.cmd**. Không thêm migration mới (head 0008).
+Giữ nguyên **.env.docker và Docker volume**, giải nén đè mã nguồn, chạy **setup.cmd một lần** để nâng migration **0009** và build API/web/worker. Sau đó dùng **run.cmd**.
 
 ## Cách dùng
 
-Vào **Tài khoản Telegram → lọc → tích các dòng hoặc Chọn toàn bộ kết quả lọc → Xóa đã chọn**. Có thể bỏ tích một vài dòng để giữ lại. Nút Xóa đã chọn xếp hàng ngay, **không mở hộp xác nhận và không bắt gõ tên**.
+Chọn SS → **Kháng nghị theo mẫu đã chọn** → nhập email chung hoặc riêng → **Chuẩn bị bản xem trước** → kiểm tra từng nội dung đã điền → xác nhận gửi các bản sẵn sàng.
 
-Xóa khỏi ứng dụng, gồm session/tuyến/tác vụ liên quan; tài khoản Telegram vẫn tồn tại và phiên không bị đăng xuất trên Telegram. Tài khoản đang chạy được yêu cầu dừng và đợi lease kết thúc trước khi dọn. Xem tiến độ trong Tác vụ hàng loạt.
+- `{name}`: tên SS trong ứng dụng.
+- `{phone}`: số điện thoại đọc từ chính session, có tùy chọn khai báo riêng.
+- `{email}`: email bạn cung cấp. Telegram không trả đầy đủ email qua session; ứng dụng không tự đoán.
 
-[Hướng dẫn xóa](HUONG_DAN_XOA_HANG_LOAT.md) · [Kiểm thử](KIEM_THU_XOA_HANG_LOAT.md) · [Windows](HUONG_DAN_WINDOWS.md) · [Quản lý nhiều session](HUONG_DAN_QUAN_LY_SESSION.md)
+Mẫu có thể sửa. Nội dung như “I never spam messages” cần đúng với các tài khoản đã chọn và được người dùng xác nhận trước khi gửi. Bước chuẩn bị chỉ đọc/tạo nháp, chưa gửi kháng nghị.
 
-Đã kiểm thử 303 Python, 49 giao diện. Chromium thật: lọc 84 tài khoản demo, bỏ tích 1, xóa đúng 83 bằng một lần bấm; giữ tài khoản ngoài lựa chọn. Không dùng tài khoản/session thật của người dùng trong kiểm thử.
+Chỉ gửi khi SpamBot đang ở bước yêu cầu mô tả được nhận diện và ngữ cảnh vẫn khớp lúc gửi. Tài khoản chưa đúng bước được báo riêng; dùng cửa sổ SpamBot để hoàn tất bước phù hợp rồi tạo nháp mới. Gửi tin không bảo đảm Telegram duyệt/gỡ hạn chế.
 
-Giữ các chức năng nhập tự chia lô, quản lý nhiều session, tự check SpamBot và tương tác kháng nghị từ bản trước. ZIP không chứa session người dùng, .env.docker hoặc database cá nhân.
+[Hướng dẫn](HUONG_DAN_KHANG_NGHI_THEO_MAU.md) · [Kiểm thử](KIEM_THU_KHANG_NGHI_THEO_MAU.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-SHA256: `cb28f32e81c6f84edce25b311dd0a68942d94bee0be6e68980372decba500eb8`.
+309 kiểm thử Python và 51 kiểm thử giao diện qua. Chromium/FakeBackend: chọn 3 SS giả, chuẩn bị 2 bản chính xác và báo 1 chưa sẵn sàng; 0 tin trước khi duyệt, đúng 2 tin sau duyệt. Chưa dùng session người dùng gửi Telegram thật. Nội dung/email/số trong nháp và payload được mã hóa.
+
+Giữ chức năng nhập tự chia lô, quản lý/check session, SpamBot và Xóa đã chọn một lần bấm. ZIP không chứa session người dùng, .env.docker hoặc database cá nhân.
+
+SHA256: `745ae249ceb155eee37c0cbf28e8b0aa33d746dd5232a06fc9cba975f45c0423`.
 
 ## Bản trước
 
+- [Xóa hàng loạt không gõ xác nhận](telegram-forwarder-control-center-bulk-delete.zip)
 - [SpamBot / kháng nghị](telegram-forwarder-control-center-spam-check-appeal.zip)
 - [Quản lý nhiều session](telegram-forwarder-control-center-session-manager.zip)
 - [Nhập session](telegram-forwarder-control-center-session-import.zip)

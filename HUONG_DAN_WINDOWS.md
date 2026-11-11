@@ -76,3 +76,7 @@ Bản mới cần setup.cmd một lần để nâng migration 0008. Khi nhập s
 ## Xóa các tài khoản đã tích
 
 Lọc và chọn các dòng, bấm **Xóa đã chọn** để xóa hàng loạt khỏi ứng dụng, không gõ tên hay mở hộp xác nhận. Xem [HUONG_DAN_XOA_HANG_LOAT.md](HUONG_DAN_XOA_HANG_LOAT.md). Cập nhật bằng setup.cmd một lần, giữ .env.docker và volume.
+
+## Kháng nghị hàng loạt theo mẫu
+
+Bản mới cần setup.cmd một lần để nâng migration 0009. Chọn SS → Kháng nghị theo mẫu đã chọn → nhập email chung/riêng → chuẩn bị/xem trước nội dung cá nhân hóa → xác nhận gửi các bản sẵn sàng. Xem [HUONG_DAN_KHANG_NGHI_THEO_MAU.md](HUONG_DAN_KHANG_NGHI_THEO_MAU.md).
