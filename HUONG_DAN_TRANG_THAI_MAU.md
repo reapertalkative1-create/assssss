@@ -1,3 +1,5 @@
+> Cập nhật giao diện gọn: bảng hiện chỉ dùng nhãn ngắn, đã bỏ phần Lý do và khung lớn. Xem [HUONG_DAN_GIAO_DIEN_GON.md](HUONG_DAN_GIAO_DIEN_GON.md). Phần dưới mô tả cách phân loại và giao diện trước đó.
+
 # Trạng thái màu và lý do lỗi trên bảng SS
 
 Giữ `.env.docker` và Docker volume, giải nén đè ZIP mới vào đúng thư mục cũ rồi chạy **setup.cmd một lần** để build API/web/worker; sau đó dùng **run.cmd**. Không thêm migration, head vẫn 0009. Ctrl+F5 nếu còn giao diện cũ. Bản sửa tự chọn cổng trống vẫn được giữ.
