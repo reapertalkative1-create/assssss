@@ -1,20 +1,23 @@
-# Telegram Forwarder Control Center — đăng nhập trên web
+# Telegram Forwarder Control Center — nhập session hàng loạt
 
-## Tải bản mới
+[**Tải ZIP bản mới — nhập tối đa 100 session trên web**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-session-import.zip)
 
-[**Tải ZIP: nhập API ID/hash và đăng nhập Telegram trên web**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-web-login.zip)
+Giữ nguyên **.env.docker** và Docker volume, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để nâng migration 0006 và build image mới. Sau đó dùng **run.cmd**.
 
-Giải nén đè mã nguồn vào thư mục đang dùng, **giữ nguyên .env.docker và Docker volume**. Chạy **setup.cmd một lần** để build bản mới và nâng database, sau đó dùng **run.cmd**.
+Trên web: **Tài khoản Telegram → Nhập session hàng loạt → chọn tối đa 100 file Telethon .session hoặc một ZIP → chọn worker Online → nhập API ID/hash → Nhập và kiểm tra session**.
 
-Trên web: **Tài khoản Telegram → Thêm tài khoản → chọn worker → nhập api_id/api_hash → Tạo và đăng nhập → số điện thoại → OTP/2FA**. Tài khoản cũ có nút **API Telegram**. Không cần sửa .env.docker để nhập API credentials.
+Session hợp lệ không cần OTP lại. Worker kiểm tra 3 session cùng lúc, báo từng kết quả và bỏ qua trùng trong các lô đã nhập. Sau khi thành công, bạn có thể Bật tài khoản khi cần chạy chuyển tiếp. Tổng tải lên 10 MiB. Không hỗ trợ Pyrogram/tdata.
 
-Xem [hướng dẫn Windows](HUONG_DAN_WINDOWS.md) và [kết quả kiểm thử](KIEM_THU_DANG_NHAP_WEB.md). 262 kiểm thử Python và 44 kiểm thử giao diện qua; đã thử Chromium + PostgreSQL với Telegram giả lập. Chưa thử Telegram thật.
+Xem [hướng dẫn nhập](HUONG_DAN_NHAP_SESSION.md), [hướng dẫn Windows](HUONG_DAN_WINDOWS.md), [kiểm thử](KIEM_THU_NHAP_SESSION.md).
 
-SHA256: `8b40fdbc9b07a1bbbecb1388c6624783d2ec6627b85930c75463e664a4e12d4d`.
+269 kiểm thử Python, 45 kiểm thử giao diện qua; thử Chromium + worker với session giả. Chưa thử Telegram thật. Bản ZIP không chứa session người dùng hoặc .env.docker.
+
+SHA256: `52f1d6331c8f06879843c38f9fb07f53aa12421264b8605a250f3c1ca4f6493e`.
 
 ## Bản trước
 
-- [Bản sửa BOM](telegram-forwarder-control-center-windows-autoconnect-bomfix.zip)
-- [Bản tự kết nối worker](telegram-forwarder-control-center-windows-autoconnect.zip)
-- [Bản Windows cách ly](telegram-forwarder-control-center-windows-isolated.zip)
-- [Bản khôi phục](telegram-forwarder-control-center-phase6-fixed-v2-recovered.zip)
+- [Nhập API ID/hash và OTP trên web](telegram-forwarder-control-center-web-login.zip)
+- [BOM fix](telegram-forwarder-control-center-windows-autoconnect-bomfix.zip)
+- [Tự kết nối worker](telegram-forwarder-control-center-windows-autoconnect.zip)
+- [Windows cách ly](telegram-forwarder-control-center-windows-isolated.zip)
+- [Khôi phục](telegram-forwarder-control-center-phase6-fixed-v2-recovered.zip)

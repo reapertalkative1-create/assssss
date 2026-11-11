@@ -60,3 +60,7 @@ docker compose --env-file .env.docker --profile telegram stop
 ## Cập nhật bản sửa BOM
 
 Nếu thấy `Unexpected UTF-8 BOM`, tải bản BOM fix, giải nén đè vào chính thư mục đang dùng, giữ `.env.docker` và volume. Chạy `setup.cmd` lại một lần để cập nhật image API. Tài khoản admin đã tạo được giữ lại; không cần cài lại Docker hay tạo lại database.
+
+## Nhập session có sẵn
+
+Vào **Tài khoản Telegram → Nhập session hàng loạt**. Chọn tối đa 100 file Telethon `.session` hoặc một ZIP, chọn worker Online, nhập API ID/hash và bấm Nhập. Xem [HUONG_DAN_NHAP_SESSION.md](HUONG_DAN_NHAP_SESSION.md). Cập nhật bản này cần chạy setup.cmd một lần để nâng migration 0006.
