@@ -68,3 +68,7 @@ Vào **Tài khoản Telegram → Nhập session hàng loạt**. Chọn nhiều f
 ## Quản lý nhiều session
 
 Xem [HUONG_DAN_QUAN_LY_SESSION.md](HUONG_DAN_QUAN_LY_SESSION.md): bỏ trần tổng 100 session, chọn toàn bộ kết quả lọc, bật/tắt/check hàng loạt, nhãn Live/Die/đóng băng/FloodWait/lỗi và lịch sử tác vụ lưu trong database.
+
+## Tự check và kháng nghị spam
+
+Bản mới cần setup.cmd một lần để nâng migration 0008. Khi nhập session có tùy chọn tự check phiên/API + @SpamBot. Dùng **Thao tác → SpamBot / kháng nghị** để xem phản hồi, bấm nút bot hoặc xem trước/xác nhận nội dung kháng nghị. Xem [HUONG_DAN_SPAM_KHANG_NGHI.md](HUONG_DAN_SPAM_KHANG_NGHI.md).

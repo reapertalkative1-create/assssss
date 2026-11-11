@@ -1,28 +1,30 @@
-# Telegram Forwarder Control Center — quản lý nhiều session
+# Telegram Forwarder Control Center — tự check sau nhập và SpamBot / kháng nghị
 
-[**Tải ZIP quản lý session bản mới**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-session-manager.zip)
+[**Tải ZIP bản mới: tự check + spam + kháng nghị**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-spam-check-appeal.zip)
 
-Giải nén đè vào thư mục cũ, **giữ nguyên .env.docker và Docker volume**, chạy **setup.cmd một lần** để nâng migration 0007 và build API/web/worker. Sau đó dùng **run.cmd**.
+Giữ nguyên **.env.docker và Docker volume**, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để nâng migration **0008** và build API/web/worker. Sau đó dùng **run.cmd**.
 
-## Quản lý trên web
+## Chức năng mới
 
-- Bỏ trần tổng 100 session: ZIP đọc từng file và tự chia lô; không cần tự tách gói 100.
-- Chọn từng dòng, theo trang hoặc toàn bộ kết quả lọc; có thể bỏ chọn một vài dòng trong toàn bộ.
-- Bật/Tắt/Check hàng loạt, đánh dấu hoặc bỏ dấu đóng băng thủ công.
-- Lọc Live, Die, lỗi mạng, FloodWait, đóng băng, worker, bật/tắt; tìm tên hoặc username.
-- Tác vụ lưu trong database, có tiến độ, lịch sử phân trang, lọc lỗi, thử lại riêng các mục lỗi và dừng xếp hàng. Đóng web không hủy tác vụ.
+- Sau nhập có tùy chọn mặc định tự check phiên/API và hạn chế spam, gửi /start tới @SpamBot chính thức.
+- Kết quả phiên và spam hiển thị riêng; lọc chưa check, không hạn chế, bị hạn chế, cần đọc phản hồi, lỗi.
+- **Check phiên + spam** hàng loạt, có cooldown/FloodWait và dùng lại kết quả mới.
+- **Thao tác → SpamBot / kháng nghị**: đọc phản hồi thật, xem nút bot, nhập nội dung, xem trước rồi xác nhận gửi.
+- **Lấy phản hồi mới** chỉ đọc, không khởi động lại /start; không tự phát lại kháng nghị khi mất phản hồi.
+- Nội dung báo cáo/appeal được mã hóa; audit không giữ nội dung gốc.
 
-Không có trần số session toàn catalog; giới hạn từng file/yêu cầu và tài nguyên máy vẫn áp dụng. Check đăng nhập không chứng minh mọi quyền Telegram đều bình thường. Đóng băng chỉ tự ghi khi Telegram trả lỗi FROZEN; nhãn thủ công được ghi rõ.
+Kết quả gửi tin là trạng thái tương tác; quyết định xét duyệt do Telegram trả về trong hội thoại. Thông báo không nhận diện được sẽ giữ trạng thái cần đọc phản hồi. CAPTCHA/liên kết và các bước yêu cầu thao tác trong Telegram vẫn cần người dùng hoàn tất ở đó.
 
-Xem [hướng dẫn quản lý](HUONG_DAN_QUAN_LY_SESSION.md), [hướng dẫn Windows](HUONG_DAN_WINDOWS.md), [kết quả kiểm thử](KIEM_THU_QUAN_LY_SESSION.md).
+Xem [hướng dẫn SpamBot / kháng nghị](HUONG_DAN_SPAM_KHANG_NGHI.md), [kiểm thử](KIEM_THU_SPAM_KHANG_NGHI.md), [quản lý nhiều session](HUONG_DAN_QUAN_LY_SESSION.md), [Windows](HUONG_DAN_WINDOWS.md).
 
-Đã thử Chromium: ZIP 205 session giả tự chia 100+100+5 và xác thực đủ; Tắt toàn bộ 251 tài khoản, bỏ/chọn lại từng dòng, lọc Die và giữ tác vụ khi tải lại trang. Chưa thử Telegram thật. ZIP không chứa session người dùng hoặc .env.docker.
+Đã thử Chromium với 3 session/bot giả: tự check clear/limited/unknown, lọc limited, xác nhận bấm nút, xem trước/gửi nội dung và đọc phản hồi. Chưa dùng session người dùng để gửi tin Telegram thật. ZIP không chứa session người dùng, .env.docker hoặc database cá nhân.
 
-SHA256: `44db73c102260b39b5bffd53c43da0aa24b242e35ca4edc1ed41815585beef94`.
+SHA256: `21144c8b98d26384a666ddabff22bb93b094497cff796ce39cfb90a65caac2aa`.
 
 ## Bản trước
 
-- [Nhập 100 session](telegram-forwarder-control-center-session-import.zip)
+- [Quản lý nhiều session](telegram-forwarder-control-center-session-manager.zip)
+- [Nhập session](telegram-forwarder-control-center-session-import.zip)
 - [Đăng nhập/API credentials trên web](telegram-forwarder-control-center-web-login.zip)
 - [BOM fix](telegram-forwarder-control-center-windows-autoconnect-bomfix.zip)
 - [Tự kết nối worker](telegram-forwarder-control-center-windows-autoconnect.zip)

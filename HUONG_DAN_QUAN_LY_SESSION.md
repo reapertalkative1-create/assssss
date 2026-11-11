@@ -2,7 +2,7 @@
 
 ## Cập nhật
 
-Giải nén đè vào thư mục đang dùng, **giữ nguyên .env.docker và Docker volume**. Chạy **setup.cmd một lần** để nâng database lên migration **0007** và build lại API/web/worker. Sau đó dùng **run.cmd** như trước.
+Giải nén đè vào thư mục đang dùng, **giữ nguyên .env.docker và Docker volume**. Chạy **setup.cmd một lần** để nâng database lên migration **0008** và build lại API/web/worker. Sau đó dùng **run.cmd** như trước.
 
 ## Nhập không có trần tổng 100 session
 
@@ -52,3 +52,7 @@ Check hàng loạt chỉ xếp tối đa khoảng 30 lệnh chờ/đang chạy m
 API quản lý theo database, không có trần số session toàn hệ thống trong mã. Các giới hạn mỗi yêu cầu/file, phân trang và hàng đợi vẫn được giữ để kiểm soát bộ nhớ. Chọn thủ công hoặc bỏ chọn tối đa 10.000 ID trong một yêu cầu; dùng **Chọn toàn bộ kết quả lọc** cho tập lớn hơn.
 
 Session/API pair vẫn được mã hóa. ZIP nguồn công khai không chứa session người dùng, `.env.docker` hoặc database cá nhân.
+
+## Tự check và kháng nghị spam
+
+Xem [HUONG_DAN_SPAM_KHANG_NGHI.md](HUONG_DAN_SPAM_KHANG_NGHI.md): tùy chọn tự check sau nhập, check phiên + spam hàng loạt, bộ lọc spam và gửi nội dung kháng nghị theo hội thoại thật của @SpamBot.
