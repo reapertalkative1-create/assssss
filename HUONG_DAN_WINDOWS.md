@@ -4,8 +4,8 @@
 
 1. Cài **Docker Desktop cho Windows** từ https://www.docker.com/products/docker-desktop/ nếu máy chưa có. Dùng chế độ **Linux containers** và mở Docker Desktop, đợi engine chạy. Không cần cài Python, Node.js hay PostgreSQL trên Windows.
 2. Giải nén toàn bộ ZIP vào một thư mục riêng, ví dụ `Documents\TelegramForwarder` trong thư mục người dùng. Không chạy CMD ngay bên trong ZIP.
-3. Bấm đúp **setup.cmd** một lần. Script tải image, cài thư viện trong container, tạo database và hỏi tên/mật khẩu quản trị. Mật khẩu tối thiểu 12 ký tự, không chứa tên đăng nhập. Không có mật khẩu mặc định.
-4. Khi hoàn tất, trình duyệt mở **http://127.0.0.1:8787**. Lần sau chỉ cần mở Docker Desktop rồi bấm đúp **run.cmd**.
+3. Bấm đúp **setup.cmd** một lần. Script tải image, tạo database, hỏi tên/mật khẩu quản trị và tự tạo/lưu worker cho máy này. Mật khẩu tối thiểu 12 ký tự, không chứa tên đăng nhập. Không có mật khẩu mặc định.
+4. Khi hoàn tất, trình duyệt mở **http://127.0.0.1:8787**. Lần sau chỉ cần mở Docker Desktop rồi bấm đúp **run.cmd**: worker tự kết nối, script đợi máy Online rồi mở web. Không phải chép credential hoặc URL kết nối.
 
 Lần setup đầu cần internet và có thể mất vài phút. Script không cài Python/Node/PostgreSQL toàn hệ thống và không sửa biến PATH. Hai CMD gọi PowerShell có sẵn trên Windows; ExecutionPolicy Bypass chỉ áp dụng cho tiến trình chạy script đó.
 
@@ -17,22 +17,28 @@ Lần setup đầu cần internet và có thể mất vài phút. Script không 
 - Chỉ cổng giao diện `127.0.0.1:8787` được mở trên máy; database/API không mở cổng trực tiếp ra Windows/LAN.
 - Dữ liệu PostgreSQL nằm trong volume của Docker Desktop, không nằm trong ZIP. Dừng container hoặc chạy lại setup không xóa dữ liệu. Không xóa volume hay `.env.docker` nếu cần giữ dữ liệu.
 
+## Máy tự kết nối với web
+
+Worker được tạo tự động dưới dạng Linux container, có tên máy của bạn trong danh sách **Worker & máy chủ**. Lúc chạy, bạn sẽ thấy `Computer connected: ...`. Credential, worker ID và hostname được lưu tự động trong `.env.docker`, không in ra màn hình. Những lần run sau dùng lại worker đó.
+
+Nếu bạn đang dùng bản cũ: giải nén đè các tệp mã nguồn vào đúng thư mục cũ, **giữ nguyên `.env.docker` và Docker volume**, rồi chạy **setup.cmd lại một lần** để build image mới. Tài khoản quản trị có sẵn được giữ lại. Credential Linux hợp lệ đã cấu hình trước đó được dùng lại.
+
+Worker có thể Online trước khi cấu hình Telegram. Online chỉ chứng minh máy kết nối được với web, chưa có nghĩa là đã đăng nhập tài khoản Telegram.
+
 ## Bật chuyển tiếp Telegram
 
-1. Trong giao diện tạo worker với nền tảng **Linux**, dù máy bạn là Windows: worker chạy trong Linux container.
-2. Lưu credential được cấp. Lấy `api_id`/`api_hash` tại https://my.telegram.org.
-3. Mở **.env.docker** bằng Notepad và điền đủ ba trường (không thêm dấu ngoặc):
+1. Lấy `api_id`/`api_hash` tại https://my.telegram.org.
+2. Mở **.env.docker**, chỉ điền hai trường sau bằng thông tin thật:
 
 ```dotenv
-TFCC_WORKER_CREDENTIAL=credential-cua-worker-Linux
 TFCC_WORKER_TELEGRAM_API_ID=123456
 TFCC_WORKER_TELEGRAM_API_HASH=api-hash-cua-ban
 ```
 
-4. Lưu file rồi bấm **run.cmd**. Worker sẽ tự chạy trong container khi đủ ba trường. Không cần mở thêm terminal Python.
-5. Trong giao diện: tạo tài khoản Telegram → gán worker → đăng nhập số điện thoại/OTP/2FA → bật tài khoản → tạo tuyến → verify → start. Bắt đầu bằng chat thử do bạn quản lý.
+3. Lưu rồi bấm **run.cmd**. Không sửa `TFCC_WORKER_CREDENTIAL`, `TFCC_WORKER_ID` hoặc URL; các giá trị kết nối do ứng dụng quản lý.
+4. Trong giao diện: tạo tài khoản Telegram → gán vào worker của máy này → đăng nhập OTP/2FA → bật tài khoản → tạo tuyến → verify → start.
 
-Không đưa `.env.docker` lên GitHub và không sửa các khóa/DB password khi đang dùng dữ liệu cũ.
+Nếu đã cấu hình API ID/hash ở bản cũ thì hai giá trị đó được giữ nguyên. Không đưa `.env.docker` lên GitHub và không đổi khóa mã hóa/database password khi đang dùng dữ liệu cũ.
 
 ## Dừng hoặc thay cổng
 
@@ -50,6 +56,7 @@ docker compose --env-file .env.docker --profile telegram stop
 - Engine chưa sẵn sàng: mở Docker Desktop, đợi Engine running; đảm bảo đang dùng Linux containers.
 - Setup bị ngắt: chạy lại **setup.cmd**; cấu hình, khóa và tài khoản hiện có được giữ nguyên.
 - Chưa chạy setup thành công: **run.cmd** sẽ nhắc chạy setup trước.
-- Credential sai nền tảng: tạo worker **Linux** mới, cập nhật `.env.docker`, chạy lại **run.cmd**.
+- Nếu worker bị bạn thu hồi hoặc credential đã bị xoay thủ công, script sẽ báo lỗi và không tự kích hoạt lại worker bị thu hồi. Giữ thông báo lỗi để kiểm tra cấu hình hiện có.
+- Không bấm đồng thời hai setup/run: ứng dụng dùng khóa để tránh tạo hai worker hoặc ghi đè cấu hình.
 
 Đây là cấu hình local trên máy cá nhân, không phải bộ triển khai công khai qua internet. Telegram thật vẫn cần credential/tài khoản của bạn.

@@ -1,24 +1,18 @@
-# Telegram Forwarder — chạy riêng trên Windows
+# Telegram Forwarder — setup xong, run tự kết nối
 
-## Tải bản mới
+[Tải ZIP tự kết nối máy với web](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-windows-autoconnect.zip)
 
-[Tải ZIP có setup.cmd và run.cmd](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-windows-isolated.zip)
+- Mở Docker Desktop. Bấm **setup.cmd** một lần để tạo tài khoản quản trị và tự tạo/lưu worker của máy này.
+- Những lần sau bấm **run.cmd**: worker tự Online, hiện tên máy Windows và mở **http://127.0.0.1:8787**.
+- Không cần tạo worker thủ công hoặc chép credential/URL. Máy có thể Online trước khi nhập thông tin Telegram.
+- Khi bắt đầu dùng Telegram, vẫn cần API ID/hash và đăng nhập OTP/2FA của bạn.
 
-1. Cài và mở Docker Desktop, dùng Linux containers.
-2. Giải nén toàn bộ ZIP. Bấm **setup.cmd** một lần, tạo tài khoản quản trị khi được hỏi.
-3. Những lần sau bấm **run.cmd**. Mở **http://127.0.0.1:8787**.
+**Cập nhật bản cũ:** giải nén đè mã nguồn vào đúng thư mục cũ, giữ .env.docker và Docker volume, chạy setup.cmd lại một lần để build image mới. Tài khoản, khóa và dữ liệu cũ được giữ lại.
 
-Python, Node và PostgreSQL nằm trong container riêng; không cần cài chúng lên Windows. Cấu hình/khóa ở .env.docker và dữ liệu trong Docker volume riêng. Giữ file cấu hình và volume để giữ dữ liệu.
+[Hướng dẫn Windows](HUONG_DAN_WINDOWS.md) · [Kiểm thử tự kết nối](KIEM_THU_TU_KET_NOI.md)
 
-- [Hướng dẫn Windows](HUONG_DAN_WINDOWS.md)
-- [Kết quả kiểm tra Docker/PowerShell](KIEM_THU_WINDOWS_DOCKER.md)
+Đã qua 33 kiểm thử Python liên quan, kiểm tra PowerShell và chạy thực tế với Docker/PostgreSQL: không nhập credential/API Telegram vẫn Online; run hai lần dùng cùng worker, không đổi khóa và không in credential ra console. Chưa thử trực tiếp CMD trên Windows hoặc Telegram thật.
 
-Đã build và chạy thử stack Docker, đăng nhập, 9 trang quản trị, WebSocket và bật/tắt/khởi động lại worker. Cú pháp/luồng PowerShell đã kiểm tra trên Linux; chưa chạy trực tiếp thao tác bấm đúp CMD trên Windows.
+SHA-256: `2ca10e0d19606709e648983da61dfda28c1e8ce7c96ea7ea54e4109336ea1376`.
 
-Nếu bật worker trong container, chọn nền tảng **Linux** trong giao diện dù host là Windows. Telegram thật cần credential của bạn.
-
-SHA-256 ZIP mới: `953518b609fca1e53dbafa41ace99247df5ca8f6a1fe64dadd701f44d6c81bc8`.
-
-## Bản thủ công trước đó
-
-[Tải bản khôi phục v2 chạy thủ công](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-phase6-fixed-v2-recovered.zip)
+Bản cũ: [Docker thủ công](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-windows-isolated.zip).
