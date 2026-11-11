@@ -1,29 +1,31 @@
-# DEVYN FORWARDER — tự chọn cổng web
+# DEVYN FORWARDER — nhãn xanh/đỏ và lý do lỗi
 
-[**Tải ZIP mới: sửa lỗi port 8787 already allocated**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-auto-port-fix.zip)
+[**Tải ZIP mới: trạng thái rõ ràng trên bảng SS**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-status-colors.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè toàn bộ ZIP vào **đúng thư mục cài đặt cũ**, mở Docker Desktop rồi chạy **setup.cmd lại**. Những lần sau dùng **run.cmd**. Không thêm migration; head vẫn **0009**.
+Giữ **.env.docker và Docker volume**, giải nén đè toàn bộ ZIP vào **đúng thư mục cài đặt cũ**, mở Docker Desktop rồi chạy **setup.cmd một lần**; sau đó dùng **run.cmd**. Giữ launcher tự chọn cổng trống. Không thêm migration; head vẫn **0009**.
 
-## Sửa lỗi cổng
+## Trạng thái & lý do
 
-Build thành công nhưng web không khởi động được khi cổng 8787 bị ứng dụng/container khác giữ. Launcher mới:
+Bảng SS không còn chép nguyên đoạn chat SpamBot. Thay bằng nhãn màu và lý do ngắn bằng tiếng Việt:
 
-- Kiểm tra binding Docker và khả năng bind loopback; tự chọn cổng trống và lưu vào .env.docker.
-- Giữ cổng nếu thuộc chính web cùng project; không dừng container của bản cài khác.
-- Nếu có xung đột phát sinh lúc khởi động, chọn lại cổng và thử lại, tối đa 3 lần. Lỗi API/database khác vẫn được báo đúng.
-- Mở đúng địa chỉ thực tế ở dòng **Application running**, ví dụ http://127.0.0.1:8788; API allowed origins dùng cùng cổng.
-- Giữ project, admin, khóa, credential và dữ liệu; không xóa volume.
+- **Xanh**: Không bị hạn chế spam.
+- **Đỏ**: Tài khoản bị chặn / Bị hạn chế spam / Đóng băng / Bị khóa / Session hết hiệu lực, có lý do riêng.
+- **Vàng**: Chưa xác định hoặc kiểm tra chưa thành công; không tự kết luận an toàn hay tài khoản chết.
+- **Xám**: Chưa kiểm tra.
 
-Vẫn giữ bản UI mới: thông tin, phản hồi SpamBot, tiến độ và lỗi ngay trên dòng SS; không có khung Tác vụ hàng loạt phía dưới.
+Thông báo trong ảnh “Your account was blocked for violations of the Telegram Terms of Service…” được hiển thị thành **Tài khoản bị chặn**, kèm lý do Telegram báo vi phạm điều khoản; dữ liệu cũ unknown vẫn hiển thị đúng. Những lần check mới ghi limited để dùng bộ lọc Bị spam. Dữ liệu cũ cần check lại để cập nhật bộ đếm/bộ lọc lưu trên máy chủ.
 
-[Hướng dẫn cổng](HUONG_DAN_TU_CHON_CONG.md) · [Kiểm thử](KIEM_THU_TU_CHON_CONG.md) · [Windows](HUONG_DAN_WINDOWS.md) · [Bảng SS](HUONG_DAN_BANG_SS.md)
+Giữ thời gian check, tình trạng session, FloodWait, tiến độ và lỗi ngay trên từng dòng; không có khung Tác vụ hàng loạt. Cửa sổ SpamBot/kháng nghị vẫn giữ hội thoại để tương tác đúng bước khi cần.
 
-Kiểm thử PowerShell 7.4.6 trên Linux: socket bị chiếm thật, Docker binding/own listener, giữ cấu hình/khóa, lỗi cổng lúc startup và giới hạn retry; bộ hồi quy setup/run qua. Docker Compose config kiểm tra cổng web và API origins nhất quán. Chưa chạy trực tiếp Windows PowerShell 5.1/Docker Desktop của người dùng. ZIP không chứa session, khóa, .env.docker hoặc database cá nhân.
+[Hướng dẫn](HUONG_DAN_TRANG_THAI_MAU.md) · [Kiểm thử](KIEM_THU_TRANG_THAI_MAU.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-SHA256: `c51702216f15684f61eb5e56966604eab4186116bf2fffa996a9b725009fb69c`.
+62 kiểm thử frontend, 30 kiểm thử SpamBot và production build qua. Chromium kiểm tra màu xanh/đỏ thực, lý do tiếng Việt, không có nguyên văn bot trên bảng, sáng/tối và mobile bằng dữ liệu giả. Không dùng session người dùng/gửi Telegram thật. ZIP không chứa session, khóa, .env.docker hoặc database cá nhân.
+
+SHA256: `6cda1e45bcde2de66f4726895630cc84b4d07c8627a318518d4986caa145e1fa`.
 
 ## Bản trước
 
+- [Tự chọn cổng web](devyn-forwarder-auto-port-fix.zip)
 - [Thông tin trực tiếp trên bảng SS](devyn-forwarder-inline-session-details.zip)
 - [Nút check spam / đóng băng](devyn-forwarder-spam-frozen-check.zip)
 - [DEVYN FORWARDER — giao diện chuyên nghiệp](devyn-forwarder-professional-ui.zip)
