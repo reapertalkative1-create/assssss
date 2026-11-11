@@ -12,7 +12,7 @@ Vào **Tài khoản Telegram**:
 - Muốn kiểm tra nhiều tài khoản: lọc rồi bấm **Check tất cả theo bộ lọc (N)**. Thao tác này áp dụng cho toàn bộ kết quả lọc, kể cả các trang khác, không phụ thuộc các dòng đã tích.
 - Hoặc tích các SS cần kiểm tra và bấm **Check spam / đóng băng đã chọn**.
 - Dùng **Bị spam**, **Đóng băng**, **Chưa check spam**, **Lỗi check spam** để lọc nhanh. Số trên nút là tổng trong workspace; các bộ lọc tên, worker và bật/tắt khác vẫn áp dụng. Bấm lại bộ lọc nhanh đang chọn để bỏ lọc đó.
-- Xem **Tác vụ hàng loạt → Chi tiết** để biết tài khoản nào hoàn tất, lỗi hoặc đang chờ. Kết quả spam và tình trạng session trong bảng tự cập nhật mỗi 5 giây.
+- Xem **Tiến độ & kết quả** ngay trên dòng session để biết trạng thái hoàn tất, lỗi hoặc đang chờ. Kết quả spam và tình trạng session trong bảng tự cập nhật mỗi 5 giây.
 
 Worker cần Online, session và API Telegram cần hợp lệ. Không cần bật chuyển tiếp để check; worker dùng phiên đang chạy hoặc kết nối tạm có lease. Không mở đồng thời hai kết nối cùng session.
 

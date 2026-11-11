@@ -1,31 +1,30 @@
-# DEVYN FORWARDER — check spam / đóng băng
+# DEVYN FORWARDER — thông tin ngay trên bảng SS
 
-[**Tải ZIP mới: nút check trực tiếp và hàng loạt**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-spam-frozen-check.zip)
+[**Tải ZIP mới: kết quả và tiến độ trực tiếp trên dòng session**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-inline-session-details.zip)
 
 Giữ **.env.docker và Docker volume**, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để build API/web/worker, sau đó dùng **run.cmd**. Không thêm migration; head vẫn **0009**. Ctrl+F5 nếu trình duyệt còn giao diện cũ.
 
-## Cách dùng
+## Thay đổi
 
-Vào **Tài khoản Telegram**:
+Đã xóa khung **Tác vụ hàng loạt** phía dưới. Theo dõi ngay trên bảng SS:
 
-- **Check spam / đóng băng** ngay mỗi dòng tài khoản.
-- **Check tất cả theo bộ lọc (N)** kiểm tra mọi kết quả lọc, kể cả trang khác.
-- Hoặc tích các SS và dùng **Check spam / đóng băng đã chọn**.
-- Bộ lọc nhanh **Bị spam / Đóng băng / Chưa check spam / Lỗi check spam**.
-- Kết quả tự cập nhật trong bảng; tiến độ từng SS tại **Tác vụ hàng loạt → Chi tiết**.
+- **Tài khoản & kết nối**: danh tính, xác thực, worker, kết nối, bật/tắt, cấu hình API/session.
+- **Tình trạng & phản hồi**: spam, đóng băng, lỗi, FloodWait, thời gian check và nguyên văn phản hồi SpamBot hiện lưu.
+- **Tiến độ & kết quả**: đang chờ, worker xử lý, chờ duyệt, hoàn tất, thất bại/hết hạn và lỗi riêng từng SS.
+- **Xem / duyệt kháng nghị** mở lại bản đã chuẩn bị ngay tại dòng, kể cả sau khi đóng/mở web.
+- **Dừng cả đợt** ghi rõ phạm vi áp dụng cho mọi SS cùng đợt. Các nút chọn nhiều SS, check/bật/tắt/xóa/kháng nghị giữ nguyên.
 
-Check gửi /start tới @SpamBot chính thức. Kết quả mới trong 10 phút có thể được dùng lại; giữ cuộc hội thoại của tài khoản vừa kháng nghị. “Live” chỉ nghĩa là đăng nhập được. SpamBot không hạn chế không bảo đảm quyền gửi trong mọi nhóm. Đóng băng được nhận diện từ lỗi FROZEN hoặc thông báo rõ ràng được hỗ trợ; không suy đoán từ lỗi mạng.
+Kết quả tự cập nhật mỗi 5 giây. Hoạt động từng SS được tải gộp theo trang, tối đa 5 thao tác hàng loạt ưu tiên đang xử lý/chờ duyệt cùng lệnh trực tiếp gần nhất; không cần gọi danh sách tác vụ riêng. Phản hồi bot chỉ hiện cho quản trị viên, giữ quyền vận hành viên như trước.
 
-Đã sửa lỗi ghi Live khi get_me thành công nhưng SpamBot trả account_frozen. Giữ nhận diện DEVYN FORWARDER, sáng/tối, bố cục điện thoại và các chức năng bản trước.
+[Hướng dẫn bảng SS](HUONG_DAN_BANG_SS.md) · [Kiểm thử](KIEM_THU_BANG_SS.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-[Hướng dẫn](HUONG_DAN_CHECK_HAN_CHE.md) · [Kiểm thử](KIEM_THU_CHECK_HAN_CHE.md) · [Windows](HUONG_DAN_WINDOWS.md)
+67 kiểm thử Python liên quan, 56 frontend và production build thành công. Chromium thật kiểm tra thông tin trên dòng, trạng thái check mới, mở lại kháng nghị sau reload và mobile bằng dữ liệu giả. Không sử dụng session người dùng/gửi Telegram thật. ZIP không chứa session, khóa, .env.docker hoặc database cá nhân.
 
-67 kiểm thử Python liên quan và 54 frontend qua; production build thành công. Browser kiểm tra nút từng dòng, check theo bộ lọc và mobile bằng dữ liệu giả. Không dùng session người dùng/gửi Telegram thật; ZIP không chứa session, .env.docker, khóa hoặc database cá nhân.
-
-SHA256: `457895818d5db906bb1ee70a6fe5c36f330ea766171af0be0d4942e51d9608ba`.
+SHA256: `6f521a5db0b8d7119411b04564bdcf10a30cb6e6c5d8dc63953752958d1e5815`.
 
 ## Bản trước
 
+- [Nút check spam / đóng băng](devyn-forwarder-spam-frozen-check.zip)
 - [DEVYN FORWARDER — giao diện chuyên nghiệp](devyn-forwarder-professional-ui.zip)
 - [Kháng nghị hàng loạt theo mẫu](telegram-forwarder-control-center-bulk-appeal-template.zip)
 - [Xóa hàng loạt](telegram-forwarder-control-center-bulk-delete.zip)

@@ -40,7 +40,7 @@ Dòng riêng ưu tiên hơn email chung. Số điện thoại không khai báo s
 3. Kiểm tra mẫu và thông tin. Câu “I never spam messages” chỉ phù hợp nếu đúng sự thật với các tài khoản được chọn; sửa mẫu cho đúng trường hợp của bạn.
 4. Tích **Tôi đã kiểm tra mẫu, thông tin và xác nhận nội dung đúng với tất cả tài khoản sẵn sàng gửi**.
 5. Bấm **Xác nhận gửi N kháng nghị**. Chỉ những bản đã sẵn sàng và được duyệt mới xếp lệnh gửi.
-6. Xem kết quả từng SS. Đóng web không làm mất tác vụ; mở lại từ **Tác vụ hàng loạt → Chi tiết** để tiếp tục xem trước/duyệt hoặc xem kết quả.
+6. Xem kết quả từng SS. Đóng web không làm mất tác vụ; mở lại bằng **Xem / duyệt kháng nghị** trên dòng session để tiếp tục xem trước/duyệt hoặc xem kết quả.
 
 ## Đúng bước SpamBot
 

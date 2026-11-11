@@ -88,3 +88,7 @@ Bản mới đổi toàn bộ giao diện, thêm logo/favicon, sáng/tối và m
 ## Nút check spam / đóng băng
 
 Bản mới có nút check ngay từng dòng, check tất cả theo bộ lọc và các bộ lọc nhanh. Giữ .env.docker/volume và chạy setup.cmd một lần để build API/web/worker, sau đó dùng run.cmd. Xem [HUONG_DAN_CHECK_HAN_CHE.md](HUONG_DAN_CHECK_HAN_CHE.md).
+
+## Thông tin ngay trên bảng session
+
+Bản mới bỏ khung Tác vụ hàng loạt, đưa trạng thái/lỗi/phản hồi bot vào dòng SS. Chạy setup.cmd một lần để build API/web/worker, giữ .env.docker và volume. Xem [HUONG_DAN_BANG_SS.md](HUONG_DAN_BANG_SS.md).

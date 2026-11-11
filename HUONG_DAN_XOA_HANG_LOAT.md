@@ -10,7 +10,7 @@ Giữ nguyên `.env.docker` và Docker volume, giải nén đè mã nguồn vào
 2. Lọc nhóm cần xóa (Die, lỗi, spam, worker, tên…).
 3. Tích từng dòng, Chọn trang hiện tại hoặc **Chọn toàn bộ N kết quả lọc**. Có thể bỏ tích những dòng muốn giữ.
 4. Bấm nút đỏ **Xóa đã chọn**. Thao tác được xếp hàng ngay, **không có hộp xác nhận và không bắt gõ tên**.
-5. Xem tiến độ trong **Tác vụ hàng loạt → Chi tiết**.
+5. Xem tiến độ ngay trên dòng session. Khi xóa xong, dòng session biến mất khỏi bảng.
 
 Tập ID được chụp tại lúc tạo tác vụ. Những dòng bỏ tích và những tài khoản ngoài lựa chọn được giữ lại, kể cả khi chuyển trang. Đổi bộ lọc sẽ bỏ lựa chọn cũ, giống các thao tác hàng loạt khác.
 

@@ -19,7 +19,7 @@ Giải nén đè vào thư mục đang dùng, **giữ nguyên .env.docker và Do
 1. Lọc theo tình trạng session, trạng thái xác thực, worker, bật/tắt hoặc tìm tên/username.
 2. Chọn từng dòng, **Chọn trang hiện tại** hoặc **Chọn toàn bộ N kết quả lọc**. Có thể bỏ chọn một vài dòng sau khi chọn toàn bộ. Chọn theo trang được giữ khi chuyển trang; đổi bộ lọc sẽ bỏ lựa chọn cũ.
 3. Chọn **Bật**, **Tắt**, **Check session**, **Đánh dấu đóng băng** hoặc **Bỏ dấu đóng băng**, rồi xác nhận số lượng.
-4. Mục **Tác vụ hàng loạt** hiển thị tổng số, xong, lỗi và đang chờ. Có phân trang/lọc lịch sử; tác vụ đang chạy được ưu tiên hiển thị.
+4. Cột **Tiến độ & kết quả** trên dòng session hiển thị trạng thái, lỗi và thời điểm cập nhật. Không còn khung Tác vụ hàng loạt phía dưới.
 5. Mở **Chi tiết → Chỉ lỗi**, hoặc bấm **Thử lại các mục lỗi** để tạo tác vụ mới đúng những tài khoản lỗi.
 
 Tắt chỉ yêu cầu worker dừng sử dụng phiên; không đăng xuất Telegram hoặc xóa session. Bật/Tắt ghi trạng thái mong muốn: worker áp dụng khi kết nối. Bật cần tài khoản đã xác thực và không bị đánh dấu đóng băng/Die.
