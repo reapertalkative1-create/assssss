@@ -27,18 +27,14 @@ Worker có thể Online trước khi cấu hình Telegram. Online chỉ chứng 
 
 ## Bật chuyển tiếp Telegram
 
-1. Lấy `api_id`/`api_hash` tại https://my.telegram.org.
-2. Mở **.env.docker**, chỉ điền hai trường sau bằng thông tin thật:
+1. Đăng nhập web bằng tài khoản quản trị đã tạo khi setup.
+2. Vào **Tài khoản Telegram → Thêm tài khoản**. Nhập tên hiển thị, chọn worker (tự chọn khi chỉ có một máy online), nhập `api_id` và `api_hash` lấy tại https://my.telegram.org → API development tools.
+3. Bấm **Tạo và đăng nhập**, nhập số điện thoại quốc tế, mã OTP và mật khẩu 2FA nếu có. Đây là thêm tài khoản Telegram đã có; tạo số/tài khoản Telegram mới bằng ứng dụng Telegram chính thức trước.
+4. Bật tài khoản → tạo tuyến → verify → start.
 
-```dotenv
-TFCC_WORKER_TELEGRAM_API_ID=123456
-TFCC_WORKER_TELEGRAM_API_HASH=api-hash-cua-ban
-```
+Không cần nhập API ID/hash vào `.env.docker`. Mỗi tài khoản có cấu hình riêng; `api_hash` được mã hóa trong database và không hiển thị lại trên web. Tài khoản cũ có nút **API Telegram** để bổ sung cấu hình (dừng tài khoản trước khi đổi). Cấu hình môi trường ở bản cũ vẫn dùng làm dự phòng.
 
-3. Lưu rồi bấm **run.cmd**. Không sửa `TFCC_WORKER_CREDENTIAL`, `TFCC_WORKER_ID` hoặc URL; các giá trị kết nối do ứng dụng quản lý.
-4. Trong giao diện: tạo tài khoản Telegram → gán vào worker của máy này → đăng nhập OTP/2FA → bật tài khoản → tạo tuyến → verify → start.
-
-Nếu đã cấu hình API ID/hash ở bản cũ thì hai giá trị đó được giữ nguyên. Không đưa `.env.docker` lên GitHub và không đổi khóa mã hóa/database password khi đang dùng dữ liệu cũ.
+Để cập nhật: giải nén đè vào đúng thư mục cũ, **giữ `.env.docker` và Docker volume**, chạy **setup.cmd một lần** để nâng database và build image mới; lần sau dùng **run.cmd**. Không đưa `.env.docker` lên GitHub hoặc thay khóa khi còn dữ liệu cũ.
 
 ## Dừng hoặc thay cổng
 

@@ -1,13 +1,20 @@
-# Telegram Forwarder — Windows tự kết nối (đã sửa BOM)
+# Telegram Forwarder Control Center — đăng nhập trên web
 
-[Tải ZIP đã sửa lỗi Unexpected UTF-8 BOM](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-windows-autoconnect-bomfix.zip)
+## Tải bản mới
 
-**Nếu đang lỗi ở bước Connecting this computer:** giải nén đè vào đúng thư mục đang dùng, giữ .env.docker và Docker volume, rồi chạy setup.cmd lại một lần. Không cần cài lại Docker hay tạo lại tài khoản quản trị.
+[**Tải ZIP: nhập API ID/hash và đăng nhập Telegram trên web**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/telegram-forwarder-control-center-web-login.zip)
 
-Setup tạo tài khoản và tự cấu hình worker. Những lần sau bấm run.cmd: worker tự Online và mở http://127.0.0.1:8787. Không cần chép credential hoặc URL. Telegram thật vẫn cần API ID/hash và OTP/2FA.
+Giải nén đè mã nguồn vào thư mục đang dùng, **giữ nguyên .env.docker và Docker volume**. Chạy **setup.cmd một lần** để build bản mới và nâng database, sau đó dùng **run.cmd**.
 
-Bản này đọc JSON UTF-8 có/không BOM ở cả provision và wait-online; PowerShell gửi UTF-8 không BOM và khôi phục encoding sau lệnh. Đã tái hiện lỗi cũ và kiểm tra 6 trường hợp CLI trên Docker/PostgreSQL cùng các kiểm thử PowerShell; giữ nguyên worker/credential. Chưa thử trực tiếp Windows PowerShell 5.1 trên Windows.
+Trên web: **Tài khoản Telegram → Thêm tài khoản → chọn worker → nhập api_id/api_hash → Tạo và đăng nhập → số điện thoại → OTP/2FA**. Tài khoản cũ có nút **API Telegram**. Không cần sửa .env.docker để nhập API credentials.
 
-[Hướng dẫn Windows](HUONG_DAN_WINDOWS.md) · [Kiểm thử](KIEM_THU_TU_KET_NOI.md)
+Xem [hướng dẫn Windows](HUONG_DAN_WINDOWS.md) và [kết quả kiểm thử](KIEM_THU_DANG_NHAP_WEB.md). 262 kiểm thử Python và 44 kiểm thử giao diện qua; đã thử Chromium + PostgreSQL với Telegram giả lập. Chưa thử Telegram thật.
 
-SHA-256: `add964e8e068c92f5a5091440f5135191a6ca8118ed2bacf19cf11d15fad42a5`.
+SHA256: `8b40fdbc9b07a1bbbecb1388c6624783d2ec6627b85930c75463e664a4e12d4d`.
+
+## Bản trước
+
+- [Bản sửa BOM](telegram-forwarder-control-center-windows-autoconnect-bomfix.zip)
+- [Bản tự kết nối worker](telegram-forwarder-control-center-windows-autoconnect.zip)
+- [Bản Windows cách ly](telegram-forwarder-control-center-windows-isolated.zip)
+- [Bản khôi phục](telegram-forwarder-control-center-phase6-fixed-v2-recovered.zip)
