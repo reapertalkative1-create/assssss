@@ -84,3 +84,7 @@ Bản mới cần setup.cmd một lần để nâng migration 0009. Chọn SS �
 ## DEVYN FORWARDER — giao diện mới
 
 Bản mới đổi toàn bộ giao diện, thêm logo/favicon, sáng/tối và menu điện thoại. Giữ .env.docker và volume, giải nén đè mã nguồn vào thư mục cũ rồi chạy **setup.cmd một lần**, sau đó dùng run.cmd. Head vẫn 0009. Xem [HUONG_DAN_DEVYN_UI.md](HUONG_DAN_DEVYN_UI.md).
+
+## Nút check spam / đóng băng
+
+Bản mới có nút check ngay từng dòng, check tất cả theo bộ lọc và các bộ lọc nhanh. Giữ .env.docker/volume và chạy setup.cmd một lần để build API/web/worker, sau đó dùng run.cmd. Xem [HUONG_DAN_CHECK_HAN_CHE.md](HUONG_DAN_CHECK_HAN_CHE.md).

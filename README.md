@@ -1,25 +1,32 @@
-# DEVYN FORWARDER
+# DEVYN FORWARDER — check spam / đóng băng
 
-[**Tải DEVYN FORWARDER — giao diện mới**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-professional-ui.zip)
+[**Tải ZIP mới: nút check trực tiếp và hàng loạt**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-spam-frozen-check.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để build bản mới, sau đó dùng **run.cmd**. Database head vẫn **0009**. Nếu vẫn thấy giao diện cũ, dùng Ctrl+F5.
+Giữ **.env.docker và Docker volume**, giải nén đè mã nguồn vào thư mục cũ, chạy **setup.cmd một lần** để build API/web/worker, sau đó dùng **run.cmd**. Không thêm migration; head vẫn **0009**. Ctrl+F5 nếu trình duyệt còn giao diện cũ.
 
-## Giao diện mới
+## Cách dùng
 
-- Nhận diện **DEVYN FORWARDER**, logo SVG riêng, favicon và tiêu đề trình duyệt.
-- Trang đăng nhập hai cột; sidebar tối; màu nhấn tím; bảng, biểu mẫu, nút và cửa sổ đồng bộ.
-- Tổng quan có thẻ chỉ số và biểu đồ từ dữ liệu máy chủ; quản lý session có thẻ lọc tình trạng.
-- Chế độ sáng/tối, tùy chọn theo hệ thống và menu điện thoại.
-- Giữ nhập nhiều session, API Telegram trên web, check session/spam, SpamBot, kháng nghị theo mẫu và **Xóa đã chọn** một lần bấm.
+Vào **Tài khoản Telegram**:
 
-[Hướng dẫn giao diện](HUONG_DAN_DEVYN_UI.md) · [Kiểm thử](KIEM_THU_DEVYN_UI.md) · [Windows](HUONG_DAN_WINDOWS.md)
+- **Check spam / đóng băng** ngay mỗi dòng tài khoản.
+- **Check tất cả theo bộ lọc (N)** kiểm tra mọi kết quả lọc, kể cả trang khác.
+- Hoặc tích các SS và dùng **Check spam / đóng băng đã chọn**.
+- Bộ lọc nhanh **Bị spam / Đóng băng / Chưa check spam / Lỗi check spam**.
+- Kết quả tự cập nhật trong bảng; tiến độ từng SS tại **Tác vụ hàng loạt → Chi tiết**.
 
-51 kiểm thử frontend qua, TypeScript/Vite build thành công. Chromium thật kiểm tra 9 trang trên desktop/điện thoại, sáng/tối, menu và cửa sổ thao tác bằng dữ liệu giả. Không dùng session người dùng hoặc gửi tin Telegram trong đợt kiểm tra UI. ZIP không chứa session, database cá nhân, khóa hoặc .env.docker.
+Check gửi /start tới @SpamBot chính thức. Kết quả mới trong 10 phút có thể được dùng lại; giữ cuộc hội thoại của tài khoản vừa kháng nghị. “Live” chỉ nghĩa là đăng nhập được. SpamBot không hạn chế không bảo đảm quyền gửi trong mọi nhóm. Đóng băng được nhận diện từ lỗi FROZEN hoặc thông báo rõ ràng được hỗ trợ; không suy đoán từ lỗi mạng.
 
-SHA256: `9e63566f21bd4c8e06ca360ea4246fafdf379e9aa191e47e86c2e5215e36b03e`.
+Đã sửa lỗi ghi Live khi get_me thành công nhưng SpamBot trả account_frozen. Giữ nhận diện DEVYN FORWARDER, sáng/tối, bố cục điện thoại và các chức năng bản trước.
+
+[Hướng dẫn](HUONG_DAN_CHECK_HAN_CHE.md) · [Kiểm thử](KIEM_THU_CHECK_HAN_CHE.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+67 kiểm thử Python liên quan và 54 frontend qua; production build thành công. Browser kiểm tra nút từng dòng, check theo bộ lọc và mobile bằng dữ liệu giả. Không dùng session người dùng/gửi Telegram thật; ZIP không chứa session, .env.docker, khóa hoặc database cá nhân.
+
+SHA256: `457895818d5db906bb1ee70a6fe5c36f330ea766171af0be0d4942e51d9608ba`.
 
 ## Bản trước
 
+- [DEVYN FORWARDER — giao diện chuyên nghiệp](devyn-forwarder-professional-ui.zip)
 - [Kháng nghị hàng loạt theo mẫu](telegram-forwarder-control-center-bulk-appeal-template.zip)
 - [Xóa hàng loạt](telegram-forwarder-control-center-bulk-delete.zip)
 - [SpamBot / kháng nghị](telegram-forwarder-control-center-spam-check-appeal.zip)
