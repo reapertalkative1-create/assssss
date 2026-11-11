@@ -1,23 +1,27 @@
-# DEVYN FORWARDER — bảng SS gọn
+# DEVYN FORWARDER — proxy riêng từng SS
 
-[**Tải ZIP mới: hàng thấp, nhãn ngắn**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-compact-ui.zip)
+[**Tải ZIP mới: nhập, gán và check proxy**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-session-proxies.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần**; sau đó dùng **run.cmd**. Giữ tự chọn cổng trống, head vẫn **0009**.
+Giữ **.env.docker và Docker volume**, giải nén đè toàn bộ ZIP đúng thư mục cũ, mở Docker Desktop rồi chạy **setup.cmd một lần** để nâng database **0010** và build API/web/worker với thư viện proxy. Sau đó dùng **run.cmd**. Giữ tự chọn cổng trống và giao diện gọn.
 
-- Bỏ khung trạng thái lớn và đoạn giải thích Lý do.
-- Chỉ nhãn ngắn: **Bình thường / Bị spam / Đóng băng / Bị chặn / Bị khóa / Hết phiên / Chưa rõ / Lỗi check**.
-- Gộp xác thực/kết nối, thu kỹ thuật vào **Thông tin** ngay tại dòng.
-- Tiến độ gọn, không thẻ lớn hoặc mô tả lặp; vẫn mở được các kháng nghị đang dở từ dòng.
-- Giữ check/bật/tắt/xóa nhiều SS, không khung Tác vụ hàng loạt phía dưới.
+## Cách dùng
 
-[Hướng dẫn](HUONG_DAN_GIAO_DIEN_GON.md) · [Kiểm thử](KIEM_THU_GIAO_DIEN_GON.md) · [Windows](HUONG_DAN_WINDOWS.md)
+1. **Tài khoản Telegram → Nhập proxy**: tải .txt hoặc dán, mỗi dòng một proxy. Hỗ trợ host:port, host:port:user:pass và URL SOCKS5/SOCKS4/HTTP CONNECT.
+2. Chọn **SS đã tích** hoặc **Tất cả SS theo bộ lọc** rồi **Gán proxy**. Mỗi SS một cấu hình riêng; thiếu proxy báo lỗi, không gán dở hoặc dùng chung. Proxy dư được báo, chưa lưu thành kho.
+3. Proxy hiện ngay trên dòng: **xanh = check thành công**, **đỏ = không kết nối**, **trắng = chưa đủ kết quả/chưa check**. Không hiện username/password.
+4. **Check proxy** tại dòng, **Check proxy đã chọn** hoặc **Check proxy tất cả theo bộ lọc**. Kết quả/tiến độ ở dòng SS, không có khung tác vụ bên dưới.
 
-62 kiểm thử giao diện và production build qua. Chromium: dòng mẫu khoảng 107px, nhãn xanh/đỏ, không có nguyên văn bot/Lý do, sáng/tối và mobile bằng dữ liệu giả. Không dùng session người dùng/gửi Telegram thật. ZIP không chứa session, khóa, .env.docker hoặc database cá nhân.
+SS đang chạy tự kết nối lại với proxy mới; SS đang tắt vẫn tắt. Worker không bỏ proxy để nối trực tiếp khi proxy lỗi. Check proxy mở đường hầm và xác minh TLS HTTPS Telegram từ worker, không cần đăng nhập SS hay gửi tin. Kết quả không bảo đảm mọi datacenter MTProto truy cập được hoặc proxy luôn sống.
 
-SHA256: `035ef82f4f48edb8dfc3f0afe6525118b95e715f9865ef18ad049990954aba55`.
+[Hướng dẫn đầy đủ](HUONG_DAN_PROXY.md) · [Kiểm thử](KIEM_THU_PROXY.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+345 kiểm thử Python local, 65 frontend và production build qua. Migration nâng/hạ SQLite khớp model; tunnel HTTP/SOCKS5 có auth + TLS thử nghiệm cục bộ, tự reconnect không trùng auth key, mã hóa/xoay khóa/quyền worker và browser file/paste/chọn phạm vi qua. Browser dùng dữ liệu/fixture màu giả; không dùng session người dùng/gửi Telegram thật, chưa thử proxy thương mại hoặc build sạch Docker Windows.
+
+ZIP không chứa session, khóa, .env.docker hoặc database cá nhân. SHA256: `f8f41981b0d2d977b3f72f4f4bd4d395ffacc03d55f5791c79435c0099183291`.
 
 ## Bản trước
 
+- [Bảng SS gọn](devyn-forwarder-compact-ui.zip)
 - [Trạng thái màu](devyn-forwarder-status-colors.zip)
 - [Tự chọn cổng web](devyn-forwarder-auto-port-fix.zip)
 - [Thông tin trực tiếp trên bảng SS](devyn-forwarder-inline-session-details.zip)
