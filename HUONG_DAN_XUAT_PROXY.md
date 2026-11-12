@@ -1,3 +1,5 @@
+> Có thêm nút **Kiểm tra list proxy** để nhập/check/xuất list rời, không cần gán vào SS. Hai nút xuất nằm ngay trong cửa sổ đó. Menu Xuất proxy mô tả bên dưới vẫn áp dụng cho proxy đã gán vào SS. [Hướng dẫn mới](HUONG_DAN_CHECK_LIST_PROXY.md).
+
 # Lọc và xuất proxy sống / die
 
 Giữ `.env.docker` và Docker volume, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để cập nhật API/web. Sau đó dùng **run.cmd**. Không thêm migration, head vẫn **0010**.

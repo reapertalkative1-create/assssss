@@ -1,3 +1,5 @@
+> List proxy độc lập (migration 0012) cũng được mã hóa và được verify/rotate bằng các lệnh bên dưới.
+
 > Cấu hình API mặc định trong Cài đặt cũng được mã hóa, kiểm tra và rotate bằng các lệnh bên dưới (migration 0011). Giữ database và khóa để không phải nhập lại API.
 
 # Session encryption keys (Phase 4)

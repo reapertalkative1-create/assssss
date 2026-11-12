@@ -1,3 +1,5 @@
+> Muốn check list rời chưa gán vào SS: dùng nút riêng **Kiểm tra list proxy** ở đầu trang, tải TXT/dán rồi xuất Live/Die ngay trong cửa sổ đó. Không cần SS/API. [Hướng dẫn](HUONG_DAN_CHECK_LIST_PROXY.md). Bản mới nâng database **0012** qua setup.cmd.
+
 > API của SS mới tự lấy từ **Cài đặt → API Telegram**, không cần nhập lại khi tải SS. Bản này cần setup.cmd để nâng database **0011**, giữ .env.docker/volume. [Hướng dẫn](HUONG_DAN_LUU_API.md).
 
 > Có thể nhập SS/ZIP và proxy TXT cùng lúc, gán proxy trước lần kết nối/check đầu tiên. [Hướng dẫn](HUONG_DAN_NHAP_SS_KEM_PROXY.md).

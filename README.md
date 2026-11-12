@@ -1,24 +1,23 @@
-# DEVYN FORWARDER — API Telegram lưu một lần trong Cài đặt
+# DEVYN FORWARDER — nút riêng Kiểm tra list proxy
 
-[**Tải bản mới: lưu API tự động**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-saved-api-settings.zip)
+[**Tải ZIP mới: check list proxy độc lập**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-proxy-list-checker.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để nâng database **0011** và build API/web/worker. Sau đó dùng **run.cmd**.
+Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để nâng database **0012** và build API/web/worker. Sau đó dùng **run.cmd**.
 
-Vào **Cài đặt → API Telegram**, nhập api_id rồi api_hash. Đủ cặp hợp lệ sẽ tự lưu sau khoảng 0,8 giây; đợi nhãn xanh **Đã lưu**. Thêm tài khoản và Nhập session hàng loạt tự dùng lại, không còn ô API trong cửa sổ nhập. Đóng web hoặc khởi động lại vẫn giữ cấu hình trong database. Hash được mã hóa, không trả lại cho web hay lưu trong localStorage.
+Trong **Tài khoản Telegram**, bấm nút viền tím **Kiểm tra list proxy** ở đầu trang, cạnh **Nhập proxy**. Chọn worker Online → tải TXT hoặc dán list → **Bắt đầu check proxy** → lọc Live/Die → **Xuất Live.txt / Xuất Die.txt**.
 
-Tài khoản cũ giữ API đang dùng; thay mặc định chỉ áp dụng cho SS mới. Có thể tắt SS cũ và chọn **Thao tác → API Telegram → Dùng API đã lưu** để áp dụng lại mà không nhập hash.
+Dùng độc lập khi chưa có SS hoặc API Telegram, không gán proxy vào tài khoản. Bảng có nhãn xanh Live, đỏ Die, lỗi ngắn và ms; tách chưa check/đang check/lỗi đọc. Bỏ proxy trùng, tối đa 10.000 proxy/2 MB mỗi lô. Export lấy toàn bộ nhóm trong lô, không bị phân trang; TXT giữ username/password để nhập lại, bảng không hiện credential.
 
-Giữ luồng SS + proxy cùng lúc, mỗi SS một proxy trước lần connect đầu; proxy lỗi không tự chạy trực tiếp. Giữ nút đỏ Xóa đã chọn, check/lọc/xuất proxy sống/die và launcher tự chọn cổng.
+Đóng cửa sổ vẫn tiếp tục; mở lại **Mở lại kết quả gần đây** hoặc **Dừng check** để giữ phần đã có. Lô lưu trong database, ràng buộc người tạo/worker và mã hóa. Giữ cấu hình API tự lưu trong Cài đặt, nhập SS+proxy cùng lúc, nút đỏ Xóa đã chọn, check/xuất proxy đã gán cho SS và tự chọn cổng web.
 
-**Check list proxy:** proxy cần được gán cho SS trước; worker Online. Chọn Thao tác session → Check proxy; chưa tích SS thì Check (N) theo bộ lọc, đã tích thì Áp dụng (N). Xuất proxy → Đang chạy/Die → .txt tải riêng hai nhóm. Chưa có bộ kiểm tra list rời chưa gán.
+[Hướng dẫn](HUONG_DAN_CHECK_LIST_PROXY.md) · [Kiểm thử](KIEM_THU_CHECK_LIST_PROXY.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-[Hướng dẫn API và check proxy](HUONG_DAN_LUU_API.md) · [Kiểm thử](KIEM_THU_LUU_API.md) · [Nhập SS + proxy](HUONG_DAN_NHAP_SS_KEM_PROXY.md) · [Windows](HUONG_DAN_WINDOWS.md)
+42 kiểm thử Python liên quan, 85 frontend và production build qua. Chromium thật dùng API/worker/transport proxy thật với HTTP CONNECT, SOCKS5 và TLS cục bộ: 2 Live + 2 Die, tải thật hai file TXT đúng, lọc/mở lại lô, vừa desktop/mobile. Không có account/API Telegram, không dùng session/proxy người dùng hoặc kết nối Telegram thật. Chưa chạy PostgreSQL integration hoặc build sạch Docker/Windows ở đợt này.
 
-77 kiểm thử Python liên quan, 80 frontend và production build qua. Chromium thật xác nhận tự lưu, giữ API sau khi dừng/khởi động lại tiến trình API và nhập ZIP + proxy không cần hash; worker nhận đúng cặp đã lưu. Telegram/session giả, không gửi Telegram thật. Không chạy PostgreSQL integration hoặc build sạch Docker/Windows ở đợt này.
-
-ZIP gồm source/dist, không chứa session, khóa, .env riêng hoặc database. SHA256: `e0b8be57f0429faf4ccfd625e135afeaf6625f6078ba120c558cce5d67c1d772`.
+ZIP gồm source/dist; không có session, khóa, .env riêng hoặc database. SHA256: `92365348b7f4b27c64dcee844495a6aaaa0ab1a67931e41761be01ef27216756`.
 
 ## Bản trước
 
-- [SS + proxy cùng lúc](devyn-forwarder-session-proxy-import.zip)
-- [Xóa trực tiếp + lọc/xuất proxy](devyn-forwarder-proxy-export-delete.zip)
+- [API Telegram lưu một lần trong Cài đặt](devyn-forwarder-saved-api-settings.zip)
+- [Nhập SS + proxy cùng lúc](devyn-forwarder-session-proxy-import.zip)
+- [Xóa trực tiếp + lọc/xuất proxy của SS](devyn-forwarder-proxy-export-delete.zip)

@@ -2,7 +2,7 @@
 
 ## Cập nhật
 
-Giữ `.env.docker` và Docker volume. Giải nén đè ZIP vào **đúng thư mục cũ**, mở Docker Desktop rồi chạy **setup.cmd một lần** để nâng database lên **0011** và build API/web/worker. Những lần sau dùng **run.cmd**. Không tạo thư mục cài mới nếu muốn giữ dữ liệu cũ.
+Giữ `.env.docker` và Docker volume. Giải nén đè ZIP vào **đúng thư mục cũ**, mở Docker Desktop rồi chạy **setup.cmd một lần** để nâng database lên **0012** và build API/web/worker. Những lần sau dùng **run.cmd**. Không tạo thư mục cài mới nếu muốn giữ dữ liệu cũ.
 
 ## Nhập một lần
 
@@ -23,6 +23,6 @@ Giữ luồng **SS + proxy cùng lúc**, mỗi SS một proxy trước lần k�
 
 ## Check list proxy
 
-Bản hiện tại check proxy **đã gán cho SS**, chưa có bộ kiểm tra list rời chưa gán. Trong **Nhập proxy**, dán list/tải TXT và gán cho SS đã tích hoặc tất cả SS theo bộ lọc; nếu nhập SS kèm proxy thì đã gán sẵn. Worker cần Online (chạy run.cmd).
+Dùng nút riêng **Kiểm tra list proxy** ở đầu trang để tải TXT/dán list, check và xuất Live/Die độc lập, không cần SS hoặc API. [Hướng dẫn](HUONG_DAN_CHECK_LIST_PROXY.md). Cách check proxy đã gán cho SS vẫn giữ bên dưới. Trong **Nhập proxy**, dán list/tải TXT và gán cho SS đã tích hoặc tất cả SS theo bộ lọc; nếu nhập SS kèm proxy thì đã gán sẵn. Worker cần Online (chạy run.cmd).
 
 Chọn **Thao tác session → Check proxy**: chưa tích SS thì bấm **Check (N)** theo bộ lọc; đã tích thì bấm **Áp dụng (N)**. Xanh = check thành công, đỏ = check thất bại, trắng = chưa check. **Xuất proxy → Đang chạy → .txt** hoặc **Die → .txt** tải hai nhóm riêng.
