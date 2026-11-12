@@ -1,3 +1,5 @@
+> Kết quả check giờ hiển thị cả thời hạn khi Telegram cung cấp: Vĩnh viễn hoặc đếm ngược ngày/giờ. Thiếu dữ liệu sẽ hiện Chưa rõ thời hạn, tới hạn cần check lại. [Hướng dẫn](HUONG_DAN_THOI_HAN_SS.md).
+
 > Thanh điều khiển mới: tích SS, chọn thao tác tương ứng trong **Thao tác session**, rồi **Áp dụng (N)**; riêng Xóa dùng **Xóa đã chọn**. Chưa tích SS thì menu chỉ có các loại check cho toàn bộ kết quả lọc. [Cách dùng mới](HUONG_DAN_THANH_DIEU_KHIEN_GON.md).
 
 # Check Telegram bị spam hoặc đóng băng

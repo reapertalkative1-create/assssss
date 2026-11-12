@@ -1,3 +1,5 @@
+> Bản mới hiển thị thời hạn hạn chế trên dòng SS. Giữ .env.docker/volume, chạy setup.cmd một lần để build API/web/worker; head vẫn **0012**. [Hướng dẫn](HUONG_DAN_THOI_HAN_SS.md).
+
 > Bản mới có nút **Kiểm tra list proxy** độc lập. Giữ .env.docker/volume, chạy setup.cmd một lần để nâng database **0012** và build; sau đó run.cmd. [Hướng dẫn](HUONG_DAN_CHECK_LIST_PROXY.md).
 
 > Bản mới lưu API một lần tại Cài đặt, tự dùng cho SS mới. Giữ .env.docker/volume, chạy setup.cmd một lần để nâng database **0011** và build; sau đó run.cmd. [Hướng dẫn](HUONG_DAN_LUU_API.md). Ghi chú phiên bản cũ nằm bên dưới.

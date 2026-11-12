@@ -1,23 +1,25 @@
-# DEVYN FORWARDER — nút riêng Kiểm tra list proxy
+# DEVYN FORWARDER — thời hạn hạn chế ngay trên dòng SS
 
-[**Tải ZIP mới: check list proxy độc lập**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-proxy-list-checker.zip)
+[**Tải ZIP mới: thời hạn khóa / hạn chế**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-restriction-expiry.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để nâng database **0012** và build API/web/worker. Sau đó dùng **run.cmd**.
+Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để build API/web/worker. Sau đó dùng **run.cmd**. Không thêm migration, head vẫn **0012**.
 
-Trong **Tài khoản Telegram**, bấm nút viền tím **Kiểm tra list proxy** ở đầu trang, cạnh **Nhập proxy**. Chọn worker Online → tải TXT hoặc dán list → **Bắt đầu check proxy** → lọc Live/Die → **Xuất Live.txt / Xuất Die.txt**.
+Cột **Trạng thái** giữ nhãn Bị chặn / Bị spam / Đóng băng và thêm dòng gọn: **Vĩnh viễn**, **Còn 2 ngày 3 giờ**, **Còn 5 giờ 20 phút**, **Chưa rõ thời hạn** hoặc **Đã đến hạn · check lại**.
 
-Dùng độc lập khi chưa có SS hoặc API Telegram, không gán proxy vào tài khoản. Bảng có nhãn xanh Live, đỏ Die, lỗi ngắn và ms; tách chưa check/đang check/lỗi đọc. Bỏ proxy trùng, tối đa 10.000 proxy/2 MB mỗi lô. Export lấy toàn bộ nhóm trong lô, không bị phân trang; TXT giữ username/password để nhập lại, bảng không hiện credential.
+Chỉ hiện vĩnh viễn khi Telegram nói rõ; chỉ đếm ngược khi có hạn đủ rõ. Không suy diễn từ blocked/TOS/FROZEN/PHONE_NUMBER_BANNED, không dùng FloodWait, hạn kháng nghị hoặc ngày xóa tài khoản làm hạn mở khóa. Mốc tương đối dùng ngày của tin nhắn, không bắt đầu lại khi tải trang. Đếm ngược cập nhật mỗi phút; tới hạn vẫn giữ trạng thái hạn chế cho đến khi check mới xác nhận. Rê chuột xem mốc theo giờ Việt Nam.
 
-Đóng cửa sổ vẫn tiếp tục; mở lại **Mở lại kết quả gần đây** hoặc **Dừng check** để giữ phần đã có. Lô lưu trong database, ràng buộc người tạo/worker và mã hóa. Giữ cấu hình API tự lưu trong Cài đặt, nhập SS+proxy cùng lúc, nút đỏ Xóa đã chọn, check/xuất proxy đã gán cho SS và tự chọn cổng web.
+Dữ liệu phản hồi đã lưu có thể dùng ngay; bấm Check spam / đóng băng để lấy kết quả mới khi chưa đủ dữ liệu. Không hiện nguyên chat trên bảng. Bỏ dòng Live phụ ở tài khoản bị hạn chế. Người vận hành nhận metadata thời hạn, không nhận chat riêng.
 
-[Hướng dẫn](HUONG_DAN_CHECK_LIST_PROXY.md) · [Kiểm thử](KIEM_THU_CHECK_LIST_PROXY.md) · [Windows](HUONG_DAN_WINDOWS.md)
+[Hướng dẫn](HUONG_DAN_THOI_HAN_SS.md) · [Kiểm thử](KIEM_THU_THOI_HAN_SS.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-42 kiểm thử Python liên quan, 85 frontend và production build qua. Chromium thật dùng API/worker/transport proxy thật với HTTP CONNECT, SOCKS5 và TLS cục bộ: 2 Live + 2 Die, tải thật hai file TXT đúng, lọc/mở lại lô, vừa desktop/mobile. Không có account/API Telegram, không dùng session/proxy người dùng hoặc kết nối Telegram thật. Chưa chạy PostgreSQL integration hoặc build sạch Docker/Windows ở đợt này.
+112 kiểm thử Python liên quan, 93 frontend và production build qua. Chromium + API/SQLite với dữ liệu giả xác nhận các nhóm thời hạn, phân biệt hạn kháng nghị, tăng đồng hồ qua deadline vẫn yêu cầu check lại, desktop/mobile không tràn trang, không lỗi JS/HTTP 500. Không dùng session người dùng hoặc Telegram thật; không chạy PostgreSQL integration hoặc build sạch Docker/Windows ở đợt này.
 
-ZIP gồm source/dist; không có session, khóa, .env riêng hoặc database. SHA256: `92365348b7f4b27c64dcee844495a6aaaa0ab1a67931e41761be01ef27216756`.
+Giữ nút riêng check list proxy và xuất Live/Die, SS+proxy cùng lúc, API tự lưu trong Cài đặt, nút đỏ Xóa đã chọn và tự chọn cổng web.
+
+ZIP gồm source/dist; không có session, khóa, .env riêng hoặc database. SHA256: `656e221d28159fb5ecb9f8ec8f10f46c936f817417fd7f056d84e582655e33c5`.
 
 ## Bản trước
 
-- [API Telegram lưu một lần trong Cài đặt](devyn-forwarder-saved-api-settings.zip)
-- [Nhập SS + proxy cùng lúc](devyn-forwarder-session-proxy-import.zip)
-- [Xóa trực tiếp + lọc/xuất proxy của SS](devyn-forwarder-proxy-export-delete.zip)
+- [Check list proxy độc lập](devyn-forwarder-proxy-list-checker.zip)
+- [API lưu một lần](devyn-forwarder-saved-api-settings.zip)
+- [SS + proxy cùng lúc](devyn-forwarder-session-proxy-import.zip)

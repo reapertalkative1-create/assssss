@@ -1,3 +1,5 @@
+> Cột Trạng thái có thêm Vĩnh viễn / Còn ngày giờ / Chưa rõ thời hạn / Đã đến hạn, theo dữ liệu Telegram. [Hướng dẫn mới](HUONG_DAN_THOI_HAN_SS.md).
+
 > Cập nhật giao diện gọn: bảng hiện chỉ dùng nhãn ngắn, đã bỏ phần Lý do và khung lớn. Xem [HUONG_DAN_GIAO_DIEN_GON.md](HUONG_DAN_GIAO_DIEN_GON.md). Phần dưới mô tả cách phân loại và giao diện trước đó.
 
 # Trạng thái màu và lý do lỗi trên bảng SS
