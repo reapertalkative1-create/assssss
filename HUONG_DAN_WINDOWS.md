@@ -1,3 +1,5 @@
+> Nhập SS kèm proxy ngay cùng cửa sổ: giữ .env.docker/volume, chạy setup.cmd một lần để cập nhật API/web/worker; head vẫn 0010. [Hướng dẫn](HUONG_DAN_NHAP_SS_KEM_PROXY.md).
+
 > Cập nhật nút xóa và lọc/xuất proxy: giữ .env.docker/volume, chạy setup.cmd một lần để build API/web; head vẫn 0010. [Hướng dẫn](HUONG_DAN_XUAT_PROXY.md).
 
 > Giao diện điều khiển mới: Lọc thêm + menu Thao tác session. Giữ .env.docker/volume và chạy setup.cmd một lần để cập nhật giao diện; head vẫn 0010. [Hướng dẫn](HUONG_DAN_THANH_DIEU_KHIEN_GON.md).
