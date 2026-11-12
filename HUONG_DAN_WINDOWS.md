@@ -1,3 +1,5 @@
+> Bản hiện tại: **Gửi bài từ liên kết + TXT nhóm**, migration **0013**. Giữ `.env.docker`/volume, chạy **setup.cmd một lần**, sau đó **run.cmd**. [Hướng dẫn gửi bài](HUONG_DAN_GUI_BAI_TU_LINK.md). Các ghi chú cập nhật bên dưới là lịch sử.
+
 > Bản mới hiển thị thời hạn hạn chế trên dòng SS. Giữ .env.docker/volume, chạy setup.cmd một lần để build API/web/worker; head vẫn **0012**. [Hướng dẫn](HUONG_DAN_THOI_HAN_SS.md).
 
 > Bản mới có nút **Kiểm tra list proxy** độc lập. Giữ .env.docker/volume, chạy setup.cmd một lần để nâng database **0012** và build; sau đó run.cmd. [Hướng dẫn](HUONG_DAN_CHECK_LIST_PROXY.md).
@@ -44,11 +46,11 @@ Worker có thể Online trước khi cấu hình Telegram. Online chỉ chứng 
 ## Bật chuyển tiếp Telegram
 
 1. Đăng nhập web bằng tài khoản quản trị đã tạo khi setup.
-2. Vào **Tài khoản Telegram → Thêm tài khoản**. Nhập tên hiển thị, chọn worker (tự chọn khi chỉ có một máy online), nhập `api_id` và `api_hash` lấy tại https://my.telegram.org → API development tools.
+2. Vào **Cài đặt → API Telegram**, nhập `api_id` và `api_hash` lấy tại https://my.telegram.org → API development tools; ứng dụng tự lưu. Sau đó vào **Tài khoản Telegram → Thêm tài khoản**, nhập tên và chọn worker (tự chọn khi chỉ có một máy online).
 3. Bấm **Tạo và đăng nhập**, nhập số điện thoại quốc tế, mã OTP và mật khẩu 2FA nếu có. Đây là thêm tài khoản Telegram đã có; tạo số/tài khoản Telegram mới bằng ứng dụng Telegram chính thức trước.
-4. Bật tài khoản → tạo tuyến → verify → start.
+4. Vào **Tuyến chuyển tiếp → Gửi bài từ liên kết**, chọn tài khoản, dán link bài và tải TXT/dán nhóm, đặt khoảng nghỉ/lịch. Lưu → Kiểm tra nhóm → Bắt đầu gửi. SS sẽ được bật khi bắt đầu. Xem hướng dẫn gửi bài ở đầu tài liệu.
 
-Không cần nhập API ID/hash vào `.env.docker`. Mỗi tài khoản có cấu hình riêng; `api_hash` được mã hóa trong database và không hiển thị lại trên web. Tài khoản cũ có nút **API Telegram** để bổ sung cấu hình (dừng tài khoản trước khi đổi). Cấu hình môi trường ở bản cũ vẫn dùng làm dự phòng.
+Không cần nhập API ID/hash vào `.env.docker` hoặc nhập lại mỗi lần thêm SS. Cấu hình API đã lưu trong Cài đặt được dùng cho tài khoản mới; `api_hash` được mã hóa trong database. Cấu hình riêng đã có của tài khoản cũ vẫn được giữ.
 
 Để cập nhật: giải nén đè vào đúng thư mục cũ, **giữ `.env.docker` và Docker volume**, chạy **setup.cmd một lần** để nâng database và build image mới; lần sau dùng **run.cmd**. Không đưa `.env.docker` lên GitHub hoặc thay khóa khi còn dữ liệu cũ.
 
@@ -79,7 +81,7 @@ Nếu thấy `Unexpected UTF-8 BOM`, tải bản BOM fix, giải nén đè vào 
 
 ## Nhập session có sẵn
 
-Vào **Tài khoản Telegram → Nhập session hàng loạt**. Chọn nhiều file Telethon `.session` hoặc một ZIP, chọn worker Online, nhập API ID/hash và bấm Nhập. Xem [HUONG_DAN_NHAP_SESSION.md](HUONG_DAN_NHAP_SESSION.md). Cập nhật bản này cần chạy setup.cmd một lần để nâng migration 0007.
+Vào **Tài khoản Telegram → Nhập session hàng loạt**. Chọn nhiều file Telethon `.session` hoặc một ZIP, chọn worker Online, thêm proxy cùng cửa sổ nếu cần và bấm Nhập. API dùng lại từ Cài đặt. Xem [HUONG_DAN_NHAP_SESSION.md](HUONG_DAN_NHAP_SESSION.md). Cập nhật bản này cần chạy setup.cmd một lần để nâng migration 0007.
 
 ## Quản lý nhiều session
 
