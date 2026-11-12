@@ -1,3 +1,5 @@
+> Cập nhật ô thống kê gọn: chạy setup.cmd một lần để build API/web/worker, giữ .env.docker và volume; head vẫn 0010. [Hướng dẫn](HUONG_DAN_O_THONG_KE_GON.md).
+
 > Bản proxy mới cần setup.cmd một lần để nâng database lên 0010 và cài thư viện proxy cho worker. Giữ .env.docker và volume. [Hướng dẫn proxy](HUONG_DAN_PROXY.md).
 
 # Chạy riêng trên Windows: setup.cmd và run.cmd
