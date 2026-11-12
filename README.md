@@ -1,28 +1,28 @@
-# DEVYN FORWARDER — ô thống kê gọn
+# DEVYN FORWARDER — trang tài khoản tinh gọn
 
-[**Tải ZIP mới: 6 ô thống kê gọn**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-compact-counters.zip)
+[**Tải ZIP mới: thanh điều khiển gọn**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-streamlined-controls.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để build API/web/worker; sau đó dùng **run.cmd**. Head vẫn **0010**, giữ proxy và tự chọn cổng trống.
+Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để build giao diện; sau đó dùng **run.cmd**. Head vẫn **0010**, giữ proxy, đếm/lọc blocked và tự chọn cổng trống.
 
-## Thay đổi
+## Giao diện mới
 
-**Tất cả · Chưa check · Live · Die / hết phiên · Đóng băng · Bị chặn**
+- Bỏ khung check lớn, dãy lọc nhanh trùng với thống kê/bộ lọc, dòng check proxy riêng và các đoạn giải thích dài.
+- Tiêu đề + 3 nút nhập/thêm, 6 ô thống kê nhỏ, một thanh lọc/thao tác rồi đến bảng SS.
+- Bộ lọc chính: tên, spam, worker, số dòng. Xác thực/tình trạng/bật tắt nằm trong **Lọc thêm**; có **Bỏ lọc**.
+- Chưa tích SS: menu **Thao tác session** chỉ có các loại check, **Check (N)** áp dụng toàn bộ kết quả lọc.
+- Đã tích SS: thêm bật/tắt/xóa/kháng nghị/nhãn thủ công, chọn thao tác rồi **Áp dụng (N)**. **Chọn cả N** hỗ trợ nhiều trang và bỏ tích để loại trừ.
+- Xóa vẫn có nút đỏ **Xóa đã chọn**, xếp hàng ngay, không modal/gõ xác nhận. Bỏ chọn hết reset thao tác phá hủy.
+- Danh sách rỗng không hiện điều khiển hàng loạt vô dụng hay nút thêm tài khoản trùng.
 
-- Bỏ ô **FloodWait** và **Lỗi kiểm tra**.
-- Mỗi ô chỉ có tên và số lượng, bỏ chú thích; cao khoảng **48px** trên desktop, mobile chia 2 cột.
-- **Đóng băng** và **Bị chặn** có đếm/lọc riêng. **Tất cả** bỏ lọc hai loại trạng thái; các bộ lọc tên/worker khác vẫn giữ.
-- Tách trạng thái blocked khỏi generic spam; khi API khởi động tự cập nhật các thông báo bị chặn đã lưu mã hóa ở bản cũ. Không cần liên hệ Telegram. Số đếm/lọc sau đó dùng trạng thái lưu trong DB.
+[Hướng dẫn](HUONG_DAN_THANH_DIEU_KHIEN_GON.md) · [Kiểm thử](KIEM_THU_THANH_DIEU_KHIEN_GON.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-Số đếm là toàn workspace, không chỉ trang hiện tại. Live và Bị chặn có thể đồng thời trên một SS vì Live chỉ phản ánh khả năng đăng nhập.
+69 kiểm thử giao diện và production build qua. Chromium thật: bộ lọc, check theo phạm vi, chọn 80/bỏ tích 1, mở kháng nghị/nhập proxy, danh sách rỗng, sáng/tối và mobile bằng dữ liệu giả. Desktop 1600×1000: bảng bắt đầu khoảng y=333px; không lỗi JS/HTTP 500. Backend/worker/launcher không đổi, không dùng session người dùng/gửi Telegram thật.
 
-[Hướng dẫn](HUONG_DAN_O_THONG_KE_GON.md) · [Kiểm thử](KIEM_THU_O_THONG_KE_GON.md) · [Windows](HUONG_DAN_WINDOWS.md)
-
-49 kiểm thử Python liên quan, 66 frontend và production build qua. Chromium thật: khôi phục dữ liệu blocked cũ, đếm/lọc/reset đúng, kích thước 48px, sáng/tối/mobile bằng dữ liệu giả; không lỗi JS/HTTP 500. Không dùng session người dùng/gửi Telegram thật, không thêm migration/dependency. ZIP không chứa session, khóa, .env.docker hoặc database cá nhân.
-
-SHA256: `759a78133c2d5db18c4662a06733d6e6a5a93d3ef40a0f54b3e3fa2698fe45f7`.
+ZIP không chứa session, khóa, .env.docker hoặc database cá nhân. SHA256: `17bd9d8d99977d929ab5e705e31825790b22d0a23b88e4562006430b5928217c`.
 
 ## Bản trước
 
+- [6 ô thống kê gọn](devyn-forwarder-compact-counters.zip)
 - [Proxy riêng từng SS](devyn-forwarder-session-proxies.zip)
 - [Bảng SS gọn](devyn-forwarder-compact-ui.zip)
 - [Trạng thái màu](devyn-forwarder-status-colors.zip)

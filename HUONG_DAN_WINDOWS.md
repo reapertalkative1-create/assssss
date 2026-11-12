@@ -1,3 +1,5 @@
+> Giao diện điều khiển mới: Lọc thêm + menu Thao tác session. Giữ .env.docker/volume và chạy setup.cmd một lần để cập nhật giao diện; head vẫn 0010. [Hướng dẫn](HUONG_DAN_THANH_DIEU_KHIEN_GON.md).
+
 > Cập nhật ô thống kê gọn: chạy setup.cmd một lần để build API/web/worker, giữ .env.docker và volume; head vẫn 0010. [Hướng dẫn](HUONG_DAN_O_THONG_KE_GON.md).
 
 > Bản proxy mới cần setup.cmd một lần để nâng database lên 0010 và cài thư viện proxy cho worker. Giữ .env.docker và volume. [Hướng dẫn proxy](HUONG_DAN_PROXY.md).
