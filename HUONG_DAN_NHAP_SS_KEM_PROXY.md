@@ -1,11 +1,11 @@
 # Nhập SS và proxy cùng lúc
 
-Giữ `.env.docker` và Docker volume. Giải nén đè vào đúng thư mục đang dùng, mở Docker Desktop và chạy **setup.cmd một lần** để build API/web/worker mới. Những lần sau dùng **run.cmd**. Không thêm migration; head vẫn **0010**.
+Giữ `.env.docker` và Docker volume. Giải nén đè vào đúng thư mục đang dùng, mở Docker Desktop và chạy **setup.cmd một lần** để build API/web/worker mới. Những lần sau dùng **run.cmd**. Nâng database lên **0011** để lưu API trong Cài đặt.
 
 ## Cách nhập
 
 1. Vào **Tài khoản Telegram → Nhập session hàng loạt**.
-2. Chọn worker online, chọn nhiều file Telethon `.session` hoặc ZIP, nhập `api_id/api_hash`.
+2. Lưu `api_id/api_hash` một lần trong **Cài đặt → API Telegram**. Chọn worker online và nhiều file Telethon `.session` hoặc ZIP; cửa sổ nhập tự dùng API đã lưu.
 3. **Nhập SS kèm proxy** đã bật sẵn. Tải file proxy `.txt` UTF-8 (tối đa 2 MB) hoặc dán vào **Proxy cho session mới**. Mỗi dòng một proxy.
 4. Chọn SOCKS5 / SOCKS4 / HTTP CONNECT cho dòng chưa có scheme. Dòng có `socks5://`, `socks4://`, `http://` dùng đúng scheme đó.
 5. Bấm **Nhập và kiểm tra session**. Cột Proxy trong tiến độ cho biết proxy được gán, chỉ hiện địa chỉ/cổng.

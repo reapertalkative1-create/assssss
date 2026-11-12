@@ -1,3 +1,5 @@
+> Bản mới lưu API một lần tại Cài đặt, tự dùng cho SS mới. Giữ .env.docker/volume, chạy setup.cmd một lần để nâng database **0011** và build; sau đó run.cmd. [Hướng dẫn](HUONG_DAN_LUU_API.md). Ghi chú phiên bản cũ nằm bên dưới.
+
 > Nhập SS kèm proxy ngay cùng cửa sổ: giữ .env.docker/volume, chạy setup.cmd một lần để cập nhật API/web/worker; head vẫn 0010. [Hướng dẫn](HUONG_DAN_NHAP_SS_KEM_PROXY.md).
 
 > Cập nhật nút xóa và lọc/xuất proxy: giữ .env.docker/volume, chạy setup.cmd một lần để build API/web; head vẫn 0010. [Hướng dẫn](HUONG_DAN_XUAT_PROXY.md).

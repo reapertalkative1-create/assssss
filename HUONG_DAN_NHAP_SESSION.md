@@ -1,3 +1,5 @@
+> API chuyển sang **Cài đặt → API Telegram**, nhập một lần rồi tự dùng lại. Cập nhật bằng setup.cmd (head **0011**), giữ .env.docker/volume. [Hướng dẫn](HUONG_DAN_LUU_API.md).
+
 > Nhập SS kèm proxy ngay cùng cửa sổ, lưu proxy trước lần check đầu tiên. [Hướng dẫn](HUONG_DAN_NHAP_SS_KEM_PROXY.md). Bản hiện tại giữ migration head 0010. Ghi chú migration bên dưới mô tả bản cũ.
 
 # Nhập và quản lý nhiều session

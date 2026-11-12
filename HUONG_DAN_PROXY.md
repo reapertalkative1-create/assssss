@@ -1,3 +1,5 @@
+> API của SS mới tự lấy từ **Cài đặt → API Telegram**, không cần nhập lại khi tải SS. Bản này cần setup.cmd để nâng database **0011**, giữ .env.docker/volume. [Hướng dẫn](HUONG_DAN_LUU_API.md).
+
 > Có thể nhập SS/ZIP và proxy TXT cùng lúc, gán proxy trước lần kết nối/check đầu tiên. [Hướng dẫn](HUONG_DAN_NHAP_SS_KEM_PROXY.md).
 
 > Có bộ lọc sống/die/chưa check và menu **Xuất proxy** để tải hai file TXT riêng. [Hướng dẫn xuất](HUONG_DAN_XUAT_PROXY.md).
