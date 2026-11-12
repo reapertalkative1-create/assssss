@@ -1,27 +1,33 @@
-# DEVYN FORWARDER — trang tài khoản tinh gọn
+# DEVYN FORWARDER — xóa trực tiếp và xuất proxy
 
-[**Tải ZIP mới: thanh điều khiển gọn**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-streamlined-controls.zip)
+[**Tải ZIP mới: nút Xóa + lọc/xuất proxy**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-proxy-export-delete.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để build giao diện; sau đó dùng **run.cmd**. Head vẫn **0010**, giữ proxy, đếm/lọc blocked và tự chọn cổng trống.
+Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ rồi chạy **setup.cmd một lần** để cập nhật API/web; sau đó dùng **run.cmd**. Head vẫn **0010**; giữ worker/proxy, giao diện gọn và tự chọn cổng trống.
 
-## Giao diện mới
+## Nút xóa
 
-- Bỏ khung check lớn, dãy lọc nhanh trùng với thống kê/bộ lọc, dòng check proxy riêng và các đoạn giải thích dài.
-- Tiêu đề + 3 nút nhập/thêm, 6 ô thống kê nhỏ, một thanh lọc/thao tác rồi đến bảng SS.
-- Bộ lọc chính: tên, spam, worker, số dòng. Xác thực/tình trạng/bật tắt nằm trong **Lọc thêm**; có **Bỏ lọc**.
-- Chưa tích SS: menu **Thao tác session** chỉ có các loại check, **Check (N)** áp dụng toàn bộ kết quả lọc.
-- Đã tích SS: thêm bật/tắt/xóa/kháng nghị/nhãn thủ công, chọn thao tác rồi **Áp dụng (N)**. **Chọn cả N** hỗ trợ nhiều trang và bỏ tích để loại trừ.
-- Xóa vẫn có nút đỏ **Xóa đã chọn**, xếp hàng ngay, không modal/gõ xác nhận. Bỏ chọn hết reset thao tác phá hủy.
-- Danh sách rỗng không hiện điều khiển hàng loạt vô dụng hay nút thêm tài khoản trùng.
+Nút đỏ **Xóa đã chọn** được đưa riêng ra ngoài menu và luôn thấy khi có SS. Tích SS để bật nút rồi bấm xóa ngay, không cần tìm trong menu, gõ tên hoặc xác nhận thêm. Chọn cả N rồi bỏ tích vẫn giữ đúng phạm vi loại trừ. Menu không còn lựa chọn Xóa lặp.
 
-[Hướng dẫn](HUONG_DAN_THANH_DIEU_KHIEN_GON.md) · [Kiểm thử](KIEM_THU_THANH_DIEU_KHIEN_GON.md) · [Windows](HUONG_DAN_WINDOWS.md)
+## Proxy
 
-69 kiểm thử giao diện và production build qua. Chromium thật: bộ lọc, check theo phạm vi, chọn 80/bỏ tích 1, mở kháng nghị/nhập proxy, danh sách rỗng, sáng/tối và mobile bằng dữ liệu giả. Desktop 1600×1000: bảng bắt đầu khoảng y=333px; không lỗi JS/HTTP 500. Backend/worker/launcher không đổi, không dùng session người dùng/gửi Telegram thật.
+- Giữ **Check proxy** từng dòng và check hàng loạt theo loại thao tác đang chọn.
+- Có bộ lọc **Proxy đang chạy / Proxy die / Proxy chưa check / Proxy đang check**.
+- **Xuất proxy → Đang chạy → .txt** tải `proxies-live.txt`.
+- **Xuất proxy → Die → .txt** tải `proxies-die.txt`.
 
-ZIP không chứa session, khóa, .env.docker hoặc database cá nhân. SHA256: `17bd9d8d99977d929ab5e705e31825790b22d0a23b88e4562006430b5928217c`.
+File lấy proxy đã gán cho SS, theo kết quả check đã lưu, không bị phân trang. Nhóm sống/die theo nút xuất, giữ các bộ lọc SS khác; không phụ thuộc SS đã tích. Chưa check/đang check không bị coi là sống/die. Nhóm rỗng được báo, không tải file rỗng.
+
+URL trong TXT giữ username/password nếu có và nhập lại được; chỉ quản trị viên được tải. Credential không hiện trên bảng/audit. Giải mã lỗi sẽ báo trước khi trả file, không xuất dở.
+
+[Hướng dẫn](HUONG_DAN_XUAT_PROXY.md) · [Kiểm thử](KIEM_THU_XUAT_PROXY.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+31 kiểm thử Python liên quan, 71 frontend và production build qua. Chromium tải thật hai file từ fixture proxy có trạng thái giả, kiểm tra bộ lọc/phạm vi, xóa một SS giả bằng một lần bấm và menu vừa tablet/mobile; không lỗi JS/HTTP 500. Không sử dụng session người dùng/gửi Telegram thật. Không thêm dependency/migration.
+
+ZIP không chứa session, khóa, .env.docker, file xuất hoặc database cá nhân. SHA256: `c5afbd3f1b713b88494dac2241d42fcf1ccec979ea4e3e4dbee6299f22d59c16`.
 
 ## Bản trước
 
+- [Thanh điều khiển gọn](devyn-forwarder-streamlined-controls.zip)
 - [6 ô thống kê gọn](devyn-forwarder-compact-counters.zip)
 - [Proxy riêng từng SS](devyn-forwarder-session-proxies.zip)
 - [Bảng SS gọn](devyn-forwarder-compact-ui.zip)

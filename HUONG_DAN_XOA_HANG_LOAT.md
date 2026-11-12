@@ -1,3 +1,5 @@
+> Nút **Xóa đã chọn** hiện riêng trên thanh điều khiển; không cần chọn Xóa trong menu. Tích SS rồi bấm nút đỏ để xóa ngay.
+
 > Thanh điều khiển mới: tích SS, chọn thao tác tương ứng trong **Thao tác session**, rồi **Áp dụng (N)**; riêng Xóa dùng **Xóa đã chọn**. Chưa tích SS thì menu chỉ có các loại check cho toàn bộ kết quả lọc. [Cách dùng mới](HUONG_DAN_THANH_DIEU_KHIEN_GON.md).
 
 # Xóa các tài khoản đã tích — không gõ xác nhận

@@ -1,3 +1,5 @@
+> Có bộ lọc sống/die/chưa check và menu **Xuất proxy** để tải hai file TXT riêng. [Hướng dẫn xuất](HUONG_DAN_XUAT_PROXY.md).
+
 > Thanh điều khiển mới: tích SS, chọn thao tác tương ứng trong **Thao tác session**, rồi **Áp dụng (N)**; riêng Xóa dùng **Xóa đã chọn**. Chưa tích SS thì menu chỉ có các loại check cho toàn bộ kết quả lọc. [Cách dùng mới](HUONG_DAN_THANH_DIEU_KHIEN_GON.md).
 
 # Proxy riêng cho từng session

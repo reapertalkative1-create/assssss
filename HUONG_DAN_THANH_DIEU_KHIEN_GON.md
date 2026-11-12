@@ -17,9 +17,9 @@ Bộ lọc chính có tìm tên, spam, worker và số dòng. **Lọc thêm** m�
 
 **Chưa tích SS:** chọn Check session / Check spam & đóng băng / Check proxy trong **Thao tác session**, bấm **Check (N)** để áp dụng cho mọi kết quả lọc, kể cả trang khác.
 
-**Đã tích SS:** menu có thêm bật, tắt, xóa, kháng nghị và nhãn đóng băng thủ công. Chọn thao tác rồi bấm **Áp dụng (N)**. Chỉ áp dụng cho SS đã tích. **Chọn cả N** xuất hiện khi kết quả trải qua nhiều trang; có thể bỏ tích từng dòng để loại trừ.
+**Đã tích SS:** menu có thêm bật, tắt, kháng nghị và nhãn đóng băng thủ công. Chọn thao tác rồi bấm **Áp dụng (N)**. Chỉ áp dụng cho SS đã tích. **Chọn cả N** xuất hiện khi kết quả trải qua nhiều trang; có thể bỏ tích từng dòng để loại trừ.
 
-Riêng **Xóa** hiện nút đỏ **Xóa đã chọn**, xếp hàng ngay, không thêm hộp xác nhận hoặc bắt gõ tên. Khi bỏ chọn hết, thao tác xóa/quản lý không được giữ sang lần chọn mới.
+Nút đỏ **Xóa đã chọn** được đưa riêng ra ngoài menu, luôn thấy khi có SS và chỉ bật sau khi tích SS; xếp hàng ngay, không thêm hộp xác nhận hoặc bắt gõ tên. Khi bỏ chọn hết, thao tác xóa/quản lý không được giữ sang lần chọn mới.
 
 Nhập proxy trên tiêu đề vẫn tự dùng phạm vi SS đã tích nếu đang chọn. Kháng nghị đã lưu vẫn mở lại tại dòng SS. Các nút check riêng từng dòng giữ nguyên.
 
