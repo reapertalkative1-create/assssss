@@ -7,11 +7,11 @@ Giải nén đè vào **đúng thư mục ứng dụng đang dùng**, giữ `.en
 ## Cách gửi
 
 1. Vào **Cài đặt → API Telegram** để lưu API một lần. Tại **Tài khoản Telegram**, đăng nhập/nhập SS, cấu hình proxy nếu cần, kiểm tra tài khoản và bảo đảm worker Online.
-2. Mở **Tuyến chuyển tiếp → Gửi bài từ liên kết**. Đặt tên và chọn một SS đã xác thực từ danh sách tài khoản. Có ô tìm tên/username và phân trang.
+2. Mở **Tuyến chuyển tiếp → Gửi bài từ liên kết**. Chọn một SS đã xác thực từ danh sách tài khoản. Có ô tìm tên/username và phân trang.
 3. Trong Telegram, bấm **Sao chép liên kết tin nhắn**, dán vào ô **Liên kết bài viết Telegram**. Hỗ trợ bài công khai `https://t.me/tenkenh/123` và bài riêng `https://t.me/c/123456789/123` mà SS có quyền đọc.
 4. Chọn **Chuyển tiếp · giữ nguồn** hoặc **Sao chép nội dung**. Mỗi đợt lấy đúng một tin nhắn ở liên kết, không tự lấy bài tiếp theo hoặc cả album.
 5. Tải file `.txt` UTF-8 hoặc dán nhóm, mỗi dòng một nhóm. Tối đa **1.000 nhóm duy nhất / đợt**, file tối đa **500 KB**. Tự bỏ dòng trống, dòng bắt đầu `#` và nhóm trùng. File mới thay nội dung ô nhập; bạn có thể sửa/dán thêm trước khi lưu.
-6. Chỉnh **Nghỉ giữa hai nhóm** (mặc định 60 giây, từ 5 đến 86.400 giây). Có thể đặt **Bắt đầu từ** theo giờ trên máy; để trống để chạy sau khi bấm bắt đầu.
+6. Chỉnh **Nghỉ giữa hai nhóm** (mặc định 60 giây, từ 5 đến 86.400 giây). Tên đợt được tạo tự động; gửi bắt đầu khi bạn bấm bắt đầu. Sửa một bản nháp cũ sẽ xóa lịch đã đặt trước đó.
 7. **Lưu đợt gửi** chỉ tạo bản nháp. Bấm **Kiểm tra nhóm**, xem quyền từng nhóm. Chỉ khi bài nguồn và toàn bộ nhóm hợp lệ mới có nút **Bắt đầu gửi**. Muốn bỏ nhóm lỗi: sửa bản nháp → **Chỉ giữ nhóm hợp lệ** → lưu → kiểm tra lại.
 8. Bấm **Bắt đầu gửi** để tạo hàng đợi một lượt. SS đang tắt sẽ được bật. Xem **Tiến độ từng nhóm** để biết đã gửi, đang chờ hoặc lỗi. **Tạm dừng / Tiếp tục / Dừng / Chạy tiếp** giữ hàng đợi, không tạo thêm bản gửi trùng.
 

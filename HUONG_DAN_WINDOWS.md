@@ -1,3 +1,5 @@
+> Biểu mẫu gửi bài hiện tự đặt tên và không có ô lịch. Giữ `.env.docker`/volume và chạy **setup.cmd** một lần để cập nhật. [Hướng dẫn](HUONG_DAN_GUI_BAI_TU_LINK.md).
+
 > Bản hiện tại: **Gửi bài từ liên kết + TXT nhóm**, migration **0013**. Giữ `.env.docker`/volume, chạy **setup.cmd một lần**, sau đó **run.cmd**. [Hướng dẫn gửi bài](HUONG_DAN_GUI_BAI_TU_LINK.md). Các ghi chú cập nhật bên dưới là lịch sử.
 
 > Bản mới hiển thị thời hạn hạn chế trên dòng SS. Giữ .env.docker/volume, chạy setup.cmd một lần để build API/web/worker; head vẫn **0012**. [Hướng dẫn](HUONG_DAN_THOI_HAN_SS.md).
