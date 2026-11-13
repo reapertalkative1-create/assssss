@@ -1,20 +1,20 @@
-# DEVYN FORWARDER — nhóm tài khoản và nhóm Telegram
+# DEVYN FORWARDER — sửa hiển thị SS trong nhóm
 
-[**Tải ZIP mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-account-telegram-groups.zip)
+[**Tải ZIP mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-fix-group-members.zip)
 
-Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ, chạy **setup.cmd một lần** để nâng database **0014** và build API/web/worker; lần sau dùng **run.cmd**.
+Mở **Tài khoản Telegram → Nhóm tài khoản → Xem SS → Thêm SS**. Chọn SS (có thể qua nhiều trang), bấm **Thêm vào nhóm**; danh sách thành viên tự hiện và vẫn còn khi tải lại trang. Chọn SS từ bảng chính cũng được, cần chọn rõ nhóm đích. Xóa nhóm vẫn giữ SS; mỗi SS thuộc tối đa một nhóm.
 
-- **Nhóm tài khoản**: tạo, đổi tên, xóa nhóm; chọn nhiều SS để chuyển hoặc bỏ nhóm, lọc và thao tác theo nhóm. Xóa nhóm giữ tài khoản/session; mỗi SS một nhóm phân loại.
-- **Nhóm Telegram**: tại dòng SS đã xác thực chọn Thao tác → Nhóm Telegram. Xem, tìm, làm mới và xuất TXT nhóm chat đã tham gia. Tối đa 2.000 nhóm/lần, không tự tham gia/rời nhóm; quyền đăng cần kiểm tra tại tuyến gửi.
+Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ, chạy **setup.cmd một lần** để build API/web/worker, sau đó **run.cmd**. Không thêm migration, database vẫn **0014**.
 
-[Hướng dẫn](HUONG_DAN_NHOM_TELEGRAM.md) · [Kiểm thử](KIEM_THU_NHOM_TELEGRAM.md) · [Windows](HUONG_DAN_WINDOWS.md)
+[Hướng dẫn](HUONG_DAN_SUA_NHOM_SS.md) · [Kiểm thử](KIEM_THU_SUA_NHOM_SS.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-Kiểm thử Python chọn lọc, 98 frontend và build qua. Chromium với SQLite và dữ liệu giả kiểm tra tạo/lọc/xóa nhóm giữ SS, tìm nhóm Telegram và tải TXT ở desktop/mobile. Không dùng Telegram thật hoặc session người dùng; chưa thử Windows/Docker Desktop/PostgreSQL thực.
+Kiểm thử API nhóm trên PostgreSQL 16 (database test riêng đã xóa), frontend và build qua. Chromium + SQLite kiểm tra thêm, xem, mở lại/tải lại, chọn ở hai trang và giao diện desktop/mobile. Không dùng session người dùng hoặc Telegram thật, không thử Windows thực.
 
-ZIP gồm source/dist, không có session, khóa, database hoặc .env riêng. SHA256: `560da333ebe4f2f656a4a53d055b75dab6ff246acde14750f7d6a7f548462022`.
+ZIP gồm source/dist, loại session, khóa, database và .env riêng. SHA256: `caca2b5337b048bc276c3dc0c3f552679008ad7a6e577113e6174fcfc6967f2d`.
 
 ## Bản trước
 
+- [Nhóm tài khoản và nhóm Telegram](devyn-forwarder-account-telegram-groups.zip)
 - [Biểu mẫu gửi bài gọn](devyn-forwarder-compact-send.zip)
 - [Gửi bài từ liên kết + TXT nhóm](devyn-forwarder-post-link-routes.zip)
 - [Thời hạn hạn chế ngay trên dòng SS](devyn-forwarder-restriction-expiry.zip)
