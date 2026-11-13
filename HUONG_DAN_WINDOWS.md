@@ -1,3 +1,5 @@
+> Bản hiện tại thêm nhóm tài khoản và danh sách nhóm Telegram. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần để nâng database **0014**, rồi **run.cmd**. [Hướng dẫn](HUONG_DAN_NHOM_TELEGRAM.md). Các ghi chú dưới đây là lịch sử.
+
 > Biểu mẫu gửi bài hiện tự đặt tên và không có ô lịch. Giữ `.env.docker`/volume và chạy **setup.cmd** một lần để cập nhật. [Hướng dẫn](HUONG_DAN_GUI_BAI_TU_LINK.md).
 
 > Bản hiện tại: **Gửi bài từ liên kết + TXT nhóm**, migration **0013**. Giữ `.env.docker`/volume, chạy **setup.cmd một lần**, sau đó **run.cmd**. [Hướng dẫn gửi bài](HUONG_DAN_GUI_BAI_TU_LINK.md). Các ghi chú cập nhật bên dưới là lịch sử.
