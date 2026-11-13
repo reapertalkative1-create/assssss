@@ -1,3 +1,5 @@
+> Bản mới sửa chọn SS lỗi, thêm lọc Có thể chạy / Live / Die và kiểm tra SS ngay trong bộ chọn. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CHON_SS_TRANG_THAI.md).
+
 > Bản mới cho chọn nhiều SS gửi bài theo nhóm hoặc SS đã tích, kèm màn hình phân công. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CHON_NHIEU_SS_GUI.md).
 
 > Bản mới sửa nhập SS vào nhóm đã chọn và thêm đổi nhóm từng/nhiều SS. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_NHAP_SS_VAO_NHOM.md).

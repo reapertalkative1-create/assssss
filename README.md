@@ -1,3 +1,21 @@
+# DEVYN FORWARDER — chọn SS lỗi và lọc trạng thái
+
+[**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-sender-status-fix.zip)
+
+- Sửa checkbox: SS lỗi/bị chặn/Die vẫn tích được, giữ lựa chọn khi đổi trang hoặc bộ lọc, và lưu vào bản nháp.
+- Bộ chọn gọn, có **Tất cả / Có thể chạy / Live / Die**, lọc spam/đóng băng/lỗi/worker/proxy, số đếm toàn bộ kết quả.
+- Kiểm tra phiên/spam/proxy cho SS đã chọn ngay tại bộ chọn và màn hình cụm. SS hết phiên hoặc bị Telegram khóa vẫn cần xử lý lỗi trước khi gửi.
+
+**Cập nhật:** giải nén đè đúng thư mục cũ, giữ `.env.docker` và Docker volume. Chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. Database vẫn 0014; giữ các tính năng nhóm, nhập SS kèm proxy và chọn nhiều tài khoản gửi.
+
+[Hướng dẫn](HUONG_DAN_CHON_SS_TRANG_THAI.md) · [Kiểm thử](KIEM_THU_CHON_SS_TRANG_THAI.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+**Kiểm thử:** 22 SQLite, 19 PostgreSQL, 109 frontend đạt; production build đạt. Thử 240 SS qua 5 trang. Chromium + API/worker giả lập xác nhận chọn cả SS lỗi, lưu nháp, kiểm tra lại lỗi kết nối rồi gửi thành công. Không dùng Telegram thật hoặc Windows thật.
+
+SHA256 ZIP: `ba40ef9d1241f604a95e0c6e99edea07f524ab7197b6dcaf6141c0e6bc24297a`.
+
+---
+
 # DEVYN FORWARDER — chọn nhiều SS gửi bài
 
 [**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-multi-sender-groups.zip)
