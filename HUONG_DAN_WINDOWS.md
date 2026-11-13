@@ -1,3 +1,5 @@
+> Bản mới cho chọn nhiều SS gửi bài theo nhóm hoặc SS đã tích, kèm màn hình phân công. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CHON_NHIEU_SS_GUI.md).
+
 > Bản mới sửa nhập SS vào nhóm đã chọn và thêm đổi nhóm từng/nhiều SS. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_NHAP_SS_VAO_NHOM.md).
 
 > Bản hiện tại sửa hiển thị và thêm SS trực tiếp trong nhóm. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**. [Hướng dẫn](HUONG_DAN_SUA_NHOM_SS.md). Các ghi chú dưới đây là lịch sử.
