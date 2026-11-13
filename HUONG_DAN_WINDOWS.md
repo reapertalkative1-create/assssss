@@ -1,3 +1,5 @@
+> Bản mới sửa nhập SS vào nhóm đã chọn và thêm đổi nhóm từng/nhiều SS. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_NHAP_SS_VAO_NHOM.md).
+
 > Bản hiện tại sửa hiển thị và thêm SS trực tiếp trong nhóm. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**. [Hướng dẫn](HUONG_DAN_SUA_NHOM_SS.md). Các ghi chú dưới đây là lịch sử.
 
 > Bản hiện tại thêm nhóm tài khoản và danh sách nhóm Telegram. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần để nâng database **0014**, rồi **run.cmd**. [Hướng dẫn](HUONG_DAN_NHOM_TELEGRAM.md). Các ghi chú dưới đây là lịch sử.

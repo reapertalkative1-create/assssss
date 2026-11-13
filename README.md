@@ -1,23 +1,30 @@
-# DEVYN FORWARDER — sửa hiển thị SS trong nhóm
+# DEVYN FORWARDER — nhập SS đúng nhóm và đổi nhóm
 
-[**Tải ZIP mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-fix-group-members.zip)
+[**Tải ZIP bản sửa tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-import-group-fix.zip)
 
-Mở **Tài khoản Telegram → Nhóm tài khoản → Xem SS → Thêm SS**. Chọn SS (có thể qua nhiều trang), bấm **Thêm vào nhóm**; danh sách thành viên tự hiện và vẫn còn khi tải lại trang. Chọn SS từ bảng chính cũng được, cần chọn rõ nhóm đích. Xóa nhóm vẫn giữ SS; mỗi SS thuộc tối đa một nhóm.
+Đã sửa nguyên nhân: nhóm đang chọn trước đây chỉ dùng để lọc bảng, chưa được lưu khi nhập SS hoặc tạo tài khoản. Bản này lưu nhóm ngay khi tải lên, giữ nhóm ở mọi lô nhập và hiển thị ngay sau khi đóng cửa sổ.
 
-Giữ **.env.docker và Docker volume**, giải nén đè đúng thư mục cũ, chạy **setup.cmd một lần** để build API/web/worker, sau đó **run.cmd**. Không thêm migration, database vẫn **0014**.
+- Chọn nhóm → Nhập session: ô Nhóm tài khoản tự điền. Có thể nhập SS mới trực tiếp trong nhóm.
+- Nút **Đổi nhóm** trên từng SS và **Đổi nhóm (N)** cho các SS đã tích; có **Bỏ khỏi nhóm**.
+- Trong nhóm: tìm kiếm, chọn trang/chọn qua nhiều trang, chuyển sang nhóm khác, bỏ nhóm; giữ tạo/đổi tên/xóa nhóm.
+- Nhập lại SS trùng vào nhóm đích sẽ đổi nhóm, giữ session/proxy cũ. Không chọn nhóm đích thì giữ nhóm hiện tại.
+- SS vào sai nhóm ở bản cũ: lọc **Chưa có nhóm** → tích SS → **Đổi nhóm (N)**, không cần nhập lại file.
 
-[Hướng dẫn](HUONG_DAN_SUA_NHOM_SS.md) · [Kiểm thử](KIEM_THU_SUA_NHOM_SS.md) · [Windows](HUONG_DAN_WINDOWS.md)
+**Cập nhật:** giải nén đè đúng thư mục đang dùng; giữ `.env.docker` và Docker volume. Chạy **setup.cmd** một lần rồi **run.cmd**, làm mới web bằng Ctrl+F5. Database vẫn 0014.
 
-Kiểm thử API nhóm trên PostgreSQL 16 (database test riêng đã xóa), frontend và build qua. Chromium + SQLite kiểm tra thêm, xem, mở lại/tải lại, chọn ở hai trang và giao diện desktop/mobile. Không dùng session người dùng hoặc Telegram thật, không thử Windows thực.
+[Hướng dẫn](HUONG_DAN_NHAP_SS_VAO_NHOM.md) · [Kiểm thử](KIEM_THU_NHAP_SS_VAO_NHOM.md) · [Windows](HUONG_DAN_WINDOWS.md)
 
-ZIP gồm source/dist, loại session, khóa, database và .env riêng. SHA256: `caca2b5337b048bc276c3dc0c3f552679008ad7a6e577113e6174fcfc6967f2d`.
+Kiểm thử: 39 SQLite, 9 PostgreSQL, 102 frontend đạt; production build đạt. Chromium + API thật xác nhận nhập vào nhóm, tải lại, đổi nhóm từng/nhiều SS, nhập trùng giữ proxy và giao diện desktop/mobile. Session kiểm thử tổng hợp; không Telegram thật hoặc Windows thật.
+
+ZIP chứa source/dist, không chứa dữ liệu hay khóa của người dùng. SHA256: `ebe28234cc7fb48b9901c159c8d1bd7948de523289eb5aad5f6e66c0d431d8f8`.
 
 ## Bản trước
 
+- [Sửa danh sách thành viên](devyn-forwarder-fix-group-members.zip)
 - [Nhóm tài khoản và nhóm Telegram](devyn-forwarder-account-telegram-groups.zip)
 - [Biểu mẫu gửi bài gọn](devyn-forwarder-compact-send.zip)
 - [Gửi bài từ liên kết + TXT nhóm](devyn-forwarder-post-link-routes.zip)
-- [Thời hạn hạn chế ngay trên dòng SS](devyn-forwarder-restriction-expiry.zip)
-- [Check list proxy độc lập](devyn-forwarder-proxy-list-checker.zip)
+- [Thời hạn hạn chế SS](devyn-forwarder-restriction-expiry.zip)
+- [Check list proxy](devyn-forwarder-proxy-list-checker.zip)
 - [API lưu một lần](devyn-forwarder-saved-api-settings.zip)
 - [SS + proxy cùng lúc](devyn-forwarder-session-proxy-import.zip)
