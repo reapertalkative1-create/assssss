@@ -1,3 +1,26 @@
+# DEVYN FORWARDER — SS cố định và chống gửi trùng
+
+[**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-fixed-senders.zip)
+
+Gửi bài từ liên kết giữ SS phụ trách nhóm giữa các đợt. Cùng bài vào cùng nhóm chỉ có một tác vụ trong lịch sử; tạo lại đợt hoặc khởi động lại không tạo thêm lần gửi. Khi chưa rõ bài đã tới Telegram, tool tạm dừng để đối chiếu kết quả.
+
+- SS dư không nhận việc; không tự chuyển sang SS khác khi bị hạn chế.
+- Chờ đúng FloodWait, kể cả nhiều ngày; chặn gửi nếu proxy die, SS bị spam/đóng băng/hết phiên.
+- Hiển thị số nhóm bỏ qua do trùng và nút đối chiếu **Đã gửi / Chưa gửi · thử lại**.
+- `setup.cmd` dừng worker/API trước khi nâng lịch sử; giữ session, proxy, API và tài khoản quản trị.
+
+**Cập nhật:** giữ `.env.docker` và Docker volume, giải nén đè đúng thư mục cũ, chạy **setup.cmd** một lần để nâng database **0015**, rồi **run.cmd**, Ctrl+F5.
+
+[Hướng dẫn](HUONG_DAN_GUI_CO_DINH.md) · [Kiểm thử](KIEM_THU_GUI_CO_DINH.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+87 kiểm thử Python, 47 PostgreSQL, 111 frontend đạt; kiểm thử migration cũ và launcher PowerShell đạt. Dữ liệu giả lập 1.000 SS/200 nhóm chỉ phân công 200 SS. Trình duyệt với worker giả lập xác nhận chống trùng và giữ tác vụ chưa rõ kết quả, không gửi Telegram thật.
+
+Chỉ đăng vào nhóm cho phép nội dung đó. Bản này không xoay session/proxy và không bảo đảm tài khoản sẽ không bị Telegram hạn chế.
+
+SHA256 ZIP: `a93bf04cd26d4b5a36311c4c41a2177bae793e4f22499a6c517c878945922e08`.
+
+---
+
 # DEVYN FORWARDER — chọn SS lỗi và lọc trạng thái
 
 [**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-sender-status-fix.zip)
