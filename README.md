@@ -1,3 +1,22 @@
+# DEVYN FORWARDER — hiện nhóm lỗi và tự lưu tạm
+
+[**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-draft-group-errors.zip)
+
+- Hiện tên/link đã nhập của nhóm lỗi cùng số dòng. Bấm **Sửa dòng** để chọn đúng chỗ cần sửa; giữ nguyên các dòng khác.
+- **Kiểm tra danh sách** trước khi lưu; hiển thị nhiều lỗi cùng lúc, không cần chọn SS để kiểm tra định dạng.
+- Tự lưu link bài, danh sách nhóm, SS đã chọn, thời gian nghỉ và chế độ gửi. Đóng cửa sổ, chuyển trang hoặc tải lại vẫn khôi phục được.
+- Có **Lưu tạm / Xóa bản tạm**. Bản tạm giữ 7 ngày trong cùng trình duyệt/địa chỉ web, riêng theo người đăng nhập. Lưu lỗi giữ nội dung; lưu đợt thành công xóa bản tạm.
+
+**Cập nhật:** giữ `.env.docker` và Docker volume, giải nén đè đúng thư mục cũ, chạy **setup.cmd** một lần rồi **run.cmd**, nhấn **Ctrl+F5**. Database vẫn **0015**.
+
+[Hướng dẫn](HUONG_DAN_NHAP_TAM_VA_LOI_NHOM.md) · [Kiểm thử](KIEM_THU_NHAP_TAM_VA_LOI_NHOM.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+35 kiểm thử Python, 118 frontend và production build đạt. Chromium + API xác nhận sửa dòng 81/83, khôi phục sau khi đóng/chuyển trang/tải lại, giữ bản tạm khi lỗi và xóa sau khi lưu thành công. Không kết nối hoặc gửi Telegram thật.
+
+SHA256 ZIP: `051723bd6e1321dc4b3f1e304f5d4cd1786f3b49f64dc005549c211284280557`.
+
+---
+
 # DEVYN FORWARDER — SS cố định và chống gửi trùng
 
 [**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-fixed-senders.zip)

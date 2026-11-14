@@ -1,3 +1,5 @@
+> Bản mới hiện rõ nhóm lỗi và tự lưu tạm biểu mẫu trong trình duyệt. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. Database vẫn **0015**. [Hướng dẫn](HUONG_DAN_NHAP_TAM_VA_LOI_NHOM.md).
+
 > Bản mới: **SS cố định + lịch sử chống trùng**, database **0015**. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. Setup tự dừng worker/API trước khi nâng dữ liệu, rồi kết nối lại. [Hướng dẫn](HUONG_DAN_GUI_CO_DINH.md).
 
 > Bản mới sửa chọn SS lỗi, thêm lọc Có thể chạy / Live / Die và kiểm tra SS ngay trong bộ chọn. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CHON_SS_TRANG_THAI.md).
