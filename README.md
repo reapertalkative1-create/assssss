@@ -1,3 +1,24 @@
+# DEVYN FORWARDER — menu cụm và chọn nhiều SS
+
+[**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-clusters-selection.zip)
+
+- **Cụm làm việc** xuất hiện riêng trên menu trái.
+- Tích từng dòng, chọn trang hoặc toàn bộ kết quả tại **Tuyến chuyển tiếp** và **Mở lượt**. Giữ lựa chọn khi đổi trang/bộ lọc; thao tác chỉ áp dụng các dòng đã tích.
+- Kiểm tra nhóm, bắt đầu, tạm dừng, tiếp tục, dừng và xóa tuyến/lượt; hiển thị SS lỗi/bị bỏ qua. Có kiểm tra phiên, spam/đóng băng, proxy cho SS đã chọn.
+- **Lưu thành cụm** gộp SS/nhóm từ các lượt cũ, bỏ trùng. **Tài khoản Telegram → tích SS → Tạo cụm (N)** cũng được hỗ trợ.
+- Thanh thao tác gọn, hàng bảng thấp hơn, lọc theo SS/cụm/loại tuyến và phân trang trong lượt gửi.
+- `run.cmd` nhận biết phiên bản mới để tự build/nâng dữ liệu; kiểm tra phiên bản web và không báo thành công khi đang mở container cũ.
+
+**Cập nhật:** giữ `.env.docker` và Docker volume, giải nén đè đúng thư mục đang dùng, chạy **setup.cmd** một lần rồi **run.cmd**, mở địa chỉ launcher in ra và **Ctrl+F5**. Database vẫn **0016**. Cuối trang mới ghi **Cụm & chọn nhiều · 14.11.2026**.
+
+[Hướng dẫn](HUONG_DAN_CUM_VA_CHON_NHIEU.md) · [Kiểm thử](KIEM_THU_CUM_VA_CHON_NHIEU.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+46 kiểm thử API/SQLite, 4 PostgreSQL, 127 frontend và production build đạt. Kiểm thử PowerShell cập nhật/giữ cấu hình đạt. Chromium với 25 SS xác nhận lựa chọn qua nhiều trang, đúng phạm vi thao tác, tạo cụm từ lượt cũ và từ SS đã tích, khôi phục sau tải lại và giao diện mobile. Không gửi Telegram thật.
+
+SHA256 ZIP: `d18fdd2ca804944ab46e234f11cf1a2a856aea4b6b95a80c784321811d20f8b9`.
+
+---
+
 # DEVYN FORWARDER — cụm làm việc có tên
 
 [**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-work-clusters.zip)

@@ -1,3 +1,5 @@
+> Bản mới có **menu Cụm làm việc + tích nhiều SS**. Giữ `.env.docker`/volume, giải nén đè đúng thư mục cũ, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. `run.cmd` từ bản này tự cập nhật khi APP_VERSION thay đổi và kiểm tra đúng phiên bản web. Database vẫn **0016**. [Hướng dẫn](HUONG_DAN_CUM_VA_CHON_NHIEU.md).
+
 > Bản mới: **Cụm làm việc có tên**, lưu SS/nhóm/cấu hình dùng cho nhiều bài. Database **0016**. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CUM_LAM_VIEC.md).
 
 > Bản mới hiện rõ nhóm lỗi và tự lưu tạm biểu mẫu trong trình duyệt. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. Database vẫn **0015**. [Hướng dẫn](HUONG_DAN_NHAP_TAM_VA_LOI_NHOM.md).
