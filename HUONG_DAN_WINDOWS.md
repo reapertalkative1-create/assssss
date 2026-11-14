@@ -1,3 +1,5 @@
+> Bản mới: **Cụm làm việc có tên**, lưu SS/nhóm/cấu hình dùng cho nhiều bài. Database **0016**. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CUM_LAM_VIEC.md).
+
 > Bản mới hiện rõ nhóm lỗi và tự lưu tạm biểu mẫu trong trình duyệt. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. Database vẫn **0015**. [Hướng dẫn](HUONG_DAN_NHAP_TAM_VA_LOI_NHOM.md).
 
 > Bản mới: **SS cố định + lịch sử chống trùng**, database **0015**. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. Setup tự dừng worker/API trước khi nâng dữ liệu, rồi kết nối lại. [Hướng dẫn](HUONG_DAN_GUI_CO_DINH.md).

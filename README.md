@@ -1,3 +1,27 @@
+# DEVYN FORWARDER — cụm làm việc có tên
+
+[**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-work-clusters.zip)
+
+Tạo cụm một lần để lưu SS, nhóm nhận, cách gửi và thời gian nghỉ. Hôm nay dùng bài này, ngày mai bấm **Bài mới** và dán link khác; mỗi bài có lượt gửi và lịch sử riêng.
+
+- **Tuyến chuyển tiếp → Cụm làm việc → + Tạo cụm làm việc**: đặt tên, chọn SS, tải TXT/dán nhóm rồi lưu.
+- **Bài mới**: chỉ cần link bài. Tạo lượt, kiểm tra nhóm rồi bắt đầu các SS đã đạt.
+- **Lịch sử → Mở lượt**: xem tiến độ từng bài; đổi cấu hình cụm không sửa các lượt đã có.
+- **••• → Sửa tên & cấu hình / Xóa cụm**. Xóa cấu hình giữ SS và các lượt gửi.
+- Thẻ cụm gọn, tìm theo tên, giao diện sáng/tối và mobile. Bản nhập dở vẫn tự lưu tạm.
+
+Cụm được lưu trong cơ sở dữ liệu; đóng trình duyệt hoặc khởi động lại vẫn còn. Bộ kiểm tra SS/proxy, chống gửi trùng và chờ Telegram tiếp tục được áp dụng.
+
+**Cập nhật:** giữ `.env.docker` và Docker volume, giải nén đè đúng thư mục cũ, chạy **setup.cmd** một lần để nâng database **0016**, rồi **run.cmd**, nhấn **Ctrl+F5**.
+
+[Hướng dẫn](HUONG_DAN_CUM_LAM_VIEC.md) · [Kiểm thử](KIEM_THU_CUM_LAM_VIEC.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+38 kiểm thử Python/SQLite, 15 PostgreSQL, 4 migration và 123 frontend đạt; production build đạt. Chromium xác nhận tạo cụm, khôi phục link tạm, tạo hai bài khác nhau, giữ cấu hình lịch sử và mở đúng lượt. Không kết nối hoặc gửi Telegram thật.
+
+SHA256 ZIP: `2093fa9366560df82a3fa1645492e3f4e148c7fb617c814179ffac9e07aa1c95`.
+
+---
+
 # DEVYN FORWARDER — hiện nhóm lỗi và tự lưu tạm
 
 [**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-draft-group-errors.zip)
