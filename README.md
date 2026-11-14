@@ -1,3 +1,23 @@
+# DEVYN FORWARDER — hiện mật khẩu khi tạo tài khoản
+
+[**Tải ZIP bản đã sửa tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-visible-password.zip)
+
+- Setup hiển thị cả mật khẩu và lần nhập xác nhận.
+- Nhập không khớp hoặc mật khẩu yếu: nhập lại ngay, không chạy lại toàn bộ setup.
+- Giữ nguyên chữ hoa/thường, dấu cách, Unicode và ký tự đặc biệt khi chuyển mật khẩu qua Docker.
+- Ô **Người dùng → Thêm người dùng → Mật khẩu ban đầu** cũng hiển thị rõ.
+- Giữ nguyên tài khoản đã có và dữ liệu hiện tại.
+
+**Cập nhật:** giữ `.env.docker` và Docker volume, giải nén đè đúng thư mục đang dùng, chạy **setup.cmd** rồi **run.cmd**, Ctrl+F5. Cuối trang ghi **Mật khẩu hiển thị · 14.11.2026**. Database vẫn **0016**.
+
+[Hướng dẫn](HUONG_DAN_MAT_KHAU_HIEN_THI.md) · [Kiểm thử](KIEM_THU_MAT_KHAU_HIEN_THI.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+41 kiểm thử Python, 39 frontend, production build, kiểm thử launcher PowerShell và truyền stdin UTF-8 sang tiến trình Python đã đạt. Chưa kiểm thử trên Windows/Docker Desktop thật; phạm vi và giới hạn ghi trong tài liệu kiểm thử.
+
+SHA256 ZIP: `d2577c0816ab7f8823f9444671d86b1f6ca7f4830295b6e76a56ac55f606711b`.
+
+---
+
 # DEVYN FORWARDER — menu cụm và chọn nhiều SS
 
 [**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-clusters-selection.zip)

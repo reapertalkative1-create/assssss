@@ -1,3 +1,5 @@
+> Bản mới **hiện mật khẩu khi tạo tài khoản**. Nhập sai xác nhận có thể nhập lại ngay trong setup. Giữ `.env.docker`/volume, giải nén đè đúng thư mục cũ, chạy **setup.cmd** rồi **run.cmd**. [Hướng dẫn](HUONG_DAN_MAT_KHAU_HIEN_THI.md).
+
 > Bản mới có **menu Cụm làm việc + tích nhiều SS**. Giữ `.env.docker`/volume, giải nén đè đúng thư mục cũ, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. `run.cmd` từ bản này tự cập nhật khi APP_VERSION thay đổi và kiểm tra đúng phiên bản web. Database vẫn **0016**. [Hướng dẫn](HUONG_DAN_CUM_VA_CHON_NHIEU.md).
 
 > Bản mới: **Cụm làm việc có tên**, lưu SS/nhóm/cấu hình dùng cho nhiều bài. Database **0016**. Giữ `.env.docker`/volume, chạy **setup.cmd** một lần rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CUM_LAM_VIEC.md).
