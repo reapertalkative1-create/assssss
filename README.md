@@ -1,3 +1,21 @@
+# DEVYN FORWARDER — lịch đăng theo cụm
+
+## [Tải ZIP bản mới nhất](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-scheduled-posts.zip)
+
+Thêm **Lên lịch** trên từng cụm: chọn ngày/giờ, dùng bài viết và khoảng nghỉ đã lưu, kiểm tra quyền rồi xếp hàng một lượt. Hiện **Chờ lịch**, giờ hẹn trong lịch sử/tiến độ; có tạm dừng/dừng theo SS. Giữ Docker và worker hoạt động để gửi đúng giờ.
+
+Hỗ trợ nhóm đã cho phép đăng mà SS đã tham gia và có quyền gửi, không yêu cầu SS là quản trị nhóm. Kiểm tra lại quyền trước từng bài; kênh broadcast vẫn cần quyền đăng của kênh. Giữ FloodWait và chống trùng. Không tự tham gia nhóm/kênh hoặc chạy vòng lặp vô hạn.
+
+**Cập nhật:** giữ `.env.docker` và Docker volume; giải nén đè toàn bộ vào đúng thư mục cũ; chạy **setup.cmd → run.cmd**, Ctrl+F5. Database vẫn **0017**. Cuối trang ghi **Lịch đăng · 15.11.2026**.
+
+[Hướng dẫn](HUONG_DAN_LICH_DANG.md) · [Kiểm thử](KIEM_THU_LICH_DANG.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+100 kiểm thử API/worker trên SQLite, 22 PostgreSQL, 134 frontend và production build đạt. Chromium desktop/mobile kiểm tra giờ Việt Nam, chờ lịch, tạm dừng/dừng đạt; không gửi Telegram thật. Chưa kiểm thử Docker Desktop/Windows thật.
+
+SHA256 ZIP: `ae2af9d5eb50f7635711edabea9afb946f972ec5a121f997e5248f84389e709d`.
+
+---
+
 # DEVYN FORWARDER — cụm lưu bài, nút Chạy và khoảng nghỉ
 
 [**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-saved-clusters.zip)

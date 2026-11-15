@@ -1,3 +1,5 @@
+> Bản hiện tại **Lịch đăng theo cụm**: giữ `.env.docker`/volume, giải nén đè đúng thư mục cũ, chạy **setup.cmd → run.cmd**, Ctrl+F5. Database **0017**, cuối trang **Lịch đăng · 15.11.2026**. [Cách đặt lịch và tạm dừng](HUONG_DAN_LICH_DANG.md). Các ghi chú dưới là lịch sử.
+
 > Bản mới **Cụm lưu bài + Chạy + khoảng nghỉ Từ/Đến**. Giữ `.env.docker`/volume, giải nén đè đúng thư mục, chạy **setup.cmd** để nâng database **0017**, rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CUM_LUU_BAI.md).
 
 > Bản mới sửa bước tạo admin khi xác nhận mật khẩu đã đúng. Giữ `.env.docker`/volume, giải nén đè toàn bộ nội dung vào đúng thư mục cũ, chạy **setup.cmd → run.cmd**. Setup kiểm tra stdin trước khi hỏi mật khẩu và giữ mã lỗi cụ thể. [Hướng dẫn](HUONG_DAN_SUA_TAO_ADMIN.md).
