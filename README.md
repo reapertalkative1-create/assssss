@@ -1,3 +1,24 @@
+# DEVYN FORWARDER — cụm lưu bài, nút Chạy và khoảng nghỉ
+
+[**Tải ZIP bản mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-saved-clusters.zip)
+
+- Bỏ menu/trang riêng **Tuyến chuyển tiếp**; đường dẫn cũ chuyển về **Cụm làm việc**.
+- Mỗi cụm lưu **Liên kết bài viết Telegram**. Bấm **Chạy** ngay trên thẻ để kiểm tra và dùng bài đã lưu; **Sửa** để đổi bài hoặc cấu hình.
+- Khoảng nghỉ **Từ / Đến**, mặc định cụm mới **150–180 giây**, lưu theo cụm và sửa được. Thời gian nghỉ được chọn trong khoảng và lưu cùng từng tác vụ.
+- Giữ lịch sử/tiến độ ngay trong cụm. Nâng cấp lấy bài gần nhất cho cụm cũ và giữ thời gian nghỉ cũ.
+
+Chạy cụm chỉ gửi tới nhóm/kênh SS có quyền quản trị và quyền đăng bài; kiểm tra lại quyền trước từng lần gửi. Không tự tham gia nhóm. Giữ FloodWait, hạn chế tài khoản/proxy và chống trùng; có thể phải chờ lâu hơn khoảng đã đặt khi Telegram yêu cầu.
+
+**Cập nhật:** giữ `.env.docker` và Docker volume; giải nén đè toàn bộ vào đúng thư mục cũ; chạy **setup.cmd → run.cmd**, Ctrl+F5. Database **0017**. Cuối trang ghi **Cụm đã lưu · 15.11.2026**.
+
+[Hướng dẫn](HUONG_DAN_CUM_LUU_BAI.md) · [Kiểm thử](KIEM_THU_CUM_LUU_BAI.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+89 kiểm thử API/worker trên SQLite, 19 PostgreSQL, 132 frontend, migration 0016 → 0017 và production build đạt. Kiểm tra Chromium desktop/mobile đạt; không gửi Telegram thật. Chưa kiểm thử Docker Desktop/Windows thật.
+
+SHA256 ZIP: `3765068c54b63f5a10ddc6e61b0b5a8ee4a16dca8d80dbeaa746ff94bb4d30a5`.
+
+---
+
 # DEVYN FORWARDER — sửa tạo admin sau xác nhận mật khẩu
 
 [**Tải ZIP bản sửa mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-admin-input-fix.zip)

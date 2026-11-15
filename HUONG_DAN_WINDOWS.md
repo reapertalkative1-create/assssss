@@ -1,3 +1,5 @@
+> Bản mới **Cụm lưu bài + Chạy + khoảng nghỉ Từ/Đến**. Giữ `.env.docker`/volume, giải nén đè đúng thư mục, chạy **setup.cmd** để nâng database **0017**, rồi **run.cmd**, Ctrl+F5. [Hướng dẫn](HUONG_DAN_CUM_LUU_BAI.md).
+
 > Bản mới sửa bước tạo admin khi xác nhận mật khẩu đã đúng. Giữ `.env.docker`/volume, giải nén đè toàn bộ nội dung vào đúng thư mục cũ, chạy **setup.cmd → run.cmd**. Setup kiểm tra stdin trước khi hỏi mật khẩu và giữ mã lỗi cụ thể. [Hướng dẫn](HUONG_DAN_SUA_TAO_ADMIN.md).
 
 > Bản mới **hiện mật khẩu khi tạo tài khoản**. Nhập sai xác nhận có thể nhập lại ngay trong setup. Giữ `.env.docker`/volume, giải nén đè đúng thư mục cũ, chạy **setup.cmd** rồi **run.cmd**. [Hướng dẫn](HUONG_DAN_MAT_KHAU_HIEN_THI.md).
