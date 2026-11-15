@@ -1,3 +1,22 @@
+# DEVYN FORWARDER — sửa tạo admin sau xác nhận mật khẩu
+
+[**Tải ZIP bản sửa mới tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-admin-input-fix.zip)
+
+- Setup khởi động API rồi kiểm tra đường truyền dữ liệu trước khi hỏi mật khẩu.
+- Mật khẩu và xác nhận vẫn hiển thị; truyền qua stdin của container đang chạy, với Unicode được escape trong JSON.
+- Không che lỗi helper khi exit khác 0: hiện mã lỗi cụ thể cho stdin, PostgreSQL, quyền ghi, schema hoặc thiếu tài nguyên.
+- Giữ tài khoản, mật khẩu và dữ liệu đã có.
+
+**Cập nhật:** giữ `.env.docker` và Docker volume; giải nén đè **toàn bộ nội dung** vào đúng thư mục đang chạy, rồi **setup.cmd → run.cmd**. Phiên bản `2026.11.15-admin-input-fix`, database vẫn **0016**.
+
+[Hướng dẫn](HUONG_DAN_SUA_TAO_ADMIN.md) · [Kiểm thử](KIEM_THU_SUA_TAO_ADMIN.md) · [Windows](HUONG_DAN_WINDOWS.md)
+
+89 kiểm thử Python trên SQLite/PostgreSQL đạt. Đã kiểm thử PowerShell chuyển dữ liệu vào tiến trình Python thật, tạo admin trên PostgreSQL đã migrate và đăng nhập HTTP thành công. Chưa kiểm thử Windows/Docker Desktop thật. Log cũ đã mất phản hồi lỗi gốc nên không xác định chính xác nguyên nhân trên máy người dùng; bản này thay luồng truyền dữ liệu và bổ sung mã lỗi cụ thể.
+
+SHA256 ZIP: `d34cfee54f10fe38352990a0602015420e01c5aba079ac087b3d472100459134`.
+
+---
+
 # DEVYN FORWARDER — hiện mật khẩu khi tạo tài khoản
 
 [**Tải ZIP bản đã sửa tại đây**](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-visible-password.zip)
