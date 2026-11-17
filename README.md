@@ -1,3 +1,26 @@
+# DEVYN FORWARDER — sửa nút Chạy cụm chuyển tiếp
+
+## [Tải ZIP bản sửa mới nhất](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-cluster-start-fix1.zip)
+
+Phiên bản **2026.11.17-cluster-start-fix1**, dựa trên `devyn-no-preverify-0022.zip`. Database **0022**.
+
+- Giữ tên kênh/nhóm khi API giao job cho worker.
+- Không báo “Hoàn tất 0/0” khi lượt chưa tạo được công việc; hiển thị số nhóm và nguyên nhân không khởi chạy.
+- Phân biệt bài đã có trong lượt trước; giữ cơ chế chống gửi trùng.
+- Hoàn tác riêng phần khởi chạy của tài khoản lỗi và giữ công việc của tài khoản thành công.
+
+**Cập nhật:** chép đè vào đúng thư mục ứng dụng cũ, giữ `.env.docker`, `.docker-ready`, cấu hình worker và Docker volume; bật Docker Desktop, chạy **run.cmd**, rồi nhấn **Ctrl+F5**. Cài lần đầu: chạy **setup.cmd** trước.
+
+[Hướng dẫn cập nhật và xử lý trạng thái](HUONG_DAN_SUA_NUT_CHAY.md) · [SHA-256](devyn-cluster-start-fix1.zip.sha256)
+
+Kiểm thử: **86 test backend**, **144 test giao diện** và production build đạt. Ca giả lập 2 tài khoản/132 nhóm tạo đủ job và truyền đúng tham chiếu tới worker. Không gửi Telegram thật; chưa kiểm thử Docker/Windows hoặc PostgreSQL thật. Bản này tập trung vào nút Chạy cụm chuyển tiếp, chưa sửa toàn bộ vấn đề vòng lặp tin nhắn trong bản nguồn.
+
+SHA-256: `d749671ebea20c76bc7469fbf9b43b83076d1131e8a2d68a71643af993ffad96`.
+
+---
+
+## Các bản phát hành trước
+
 # DEVYN FORWARDER — lịch đăng theo cụm
 
 ## [Tải ZIP bản mới nhất](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-forwarder-scheduled-posts.zip)
