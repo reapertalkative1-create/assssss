@@ -1,3 +1,23 @@
+# DEVYN FORWARDER — sửa admin_required và chạy lặp liên tục
+
+## [Tải ZIP bản mới nhất](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-cluster-loop-fix2.zip)
+
+Phiên bản **2026.11.17-cluster-loop-fix2**, database **0022**.
+
+- Bỏ điều kiện ép SS phải là admin: thành viên có quyền gửi được chuyển tiếp bình thường.
+- Chia nhóm riêng cho từng SS, xáo trộn thứ tự mỗi vòng; mỗi SS chỉ gửi một nhóm tại một thời điểm.
+- Nút **Chạy trên thẻ cụm chuyển tiếp** lặp liên tục đến khi bấm **Dừng**.
+- Lỗi một nhóm/SS không kết thúc cả cụm. Giữ khoảng nghỉ, FloodWait và các kiểm tra phiên đăng nhập, quyền gửi, tài khoản bị hạn chế.
+- Lưu vòng chạy trong database; tiếp tục sau khi API/worker khởi động lại, không tạo phiên song song khi bấm Chạy nhiều lần.
+
+**Cập nhật:** bấm Dừng cụm cũ, giải nén đè vào thư mục đang dùng, giữ `.env.docker`, `.docker-ready`, cấu hình worker và Docker volume. Bật Docker Desktop, chạy **run.cmd**, cập nhật worker riêng nếu có, rồi nhấn **Ctrl+F5**.
+
+[Hướng dẫn cập nhật và hành vi chi tiết](HUONG_DAN_CUM_LAP_LIEN_TUC.md) · [SHA-256](devyn-cluster-loop-fix2.zip.sha256)
+
+Kiểm chứng bản cuối: **123 kiểm thử chuyển tiếp**, **6 kiểm thử migration/phiên bản**, **145 kiểm thử giao diện**; build production thành công. Kiểm thử dùng worker giả, chưa gửi Telegram thật hoặc chạy Docker/Windows/PostgreSQL thật.
+
+## Các bản trước
+
 # DEVYN FORWARDER — sửa nút Chạy cụm chuyển tiếp
 
 ## [Tải ZIP bản sửa mới nhất](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-cluster-start-fix1.zip)
