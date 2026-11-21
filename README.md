@@ -1,3 +1,24 @@
+# DEVYN FORWARDER — mỗi SS đi hết danh sách nhóm
+
+## [Tải ZIP bản fix3](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-full-list-fix3.zip)
+
+Phiên bản **2026.11.18-full-list-fix3**, database **0022**.
+
+- Mỗi SS nhận **toàn bộ danh sách nhóm**, theo thứ tự ngẫu nhiên riêng.
+- Không lặp nhóm đã xử lý trong cùng vòng. Hết danh sách mới bắt đầu vòng tiếp theo, đến khi bấm **Dừng**.
+- Các SS trong cùng cụm không được cấp cùng nhóm đang gửi. Khi cần, SS chọn nhóm khác còn trống hoặc chờ.
+- Giữ tiến độ từng SS qua lần khởi động lại; không gán cố định mỗi SS vào một nhóm khi SS nhiều hơn nhóm.
+- Giữ khoảng nghỉ, xử lý lỗi riêng từng SS, quyền gửi thực tế và FloodWait.
+- Tiến độ đếm lượt gửi theo từng SS và hiển thị tên SS cạnh kết quả.
+
+**Cập nhật:** bấm **Dừng** cụm cũ, giải nén đè vào thư mục đang dùng, giữ `.env.docker`, `.docker-ready`, cấu hình worker/session và Docker volume. Chạy **run.cmd**, cập nhật worker riêng nếu có, nhấn **Ctrl+F5**, rồi bấm **Chạy** trên thẻ cụm để tạo phiên dùng cách phân phối mới.
+
+[Hướng dẫn cập nhật và sử dụng](HUONG_DAN_MOI_SS_DI_HET_NHOM.md) · [SHA-256](devyn-full-list-fix3.zip.sha256)
+
+Kiểm chứng cuối: **46 kiểm thử Python** cho hàng đợi, vòng chạy, migration/phiên bản; **146 kiểm thử giao diện** và build production thành công. Dùng worker giả; chưa gửi Telegram thật hoặc chạy Docker/Windows/PostgreSQL thật.
+
+## Các bản trước
+
 # DEVYN FORWARDER — sửa admin_required và chạy lặp liên tục
 
 ## [Tải ZIP bản mới nhất](https://github.com/reapertalkative1-create/assssss/raw/refs/heads/main/devyn-cluster-loop-fix2.zip)
